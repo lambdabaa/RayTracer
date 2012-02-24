@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A box floating in empty space.
+ -->
+<scene>
+  <camera>
+    <viewPoint>5 2 3</viewPoint>
+    <viewDir>-5 -2 -3</viewDir>
+    <projNormal>5 2 3</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>4</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="blue" type="Phong">
+    <diffuseColor>.2 .3 .8</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>20</exponent>
+  </shader>
+  <surface type="Box">
+    <shader ref="blue" />
+    <minPt>-1 -1 -1</minPt>
+    <maxPt>1 1 1</maxPt>
+  </surface>
+  <light>
+    <position>3 4 5</position>
+    <intensity>1 1 1</intensity>
+  </light>
+</scene>

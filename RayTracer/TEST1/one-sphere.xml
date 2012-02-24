@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Test scene with a single sphere.
+ -->
+<scene>
+  <camera>
+    <viewPoint>5 4 3</viewPoint>
+    <viewDir>-5 -4 -3</viewDir>
+    <projNormal>5 4 3</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>5</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300
+  </image>
+  <shader name="blue" type="Phong">
+    <diffuseColor>.2 .3 .8</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>50</exponent>
+  </shader>
+  <surface type="Sphere">
+    <shader ref="blue" />
+    <!--shader type="ShowNormal"/-->
+    <center>0 0 0</center>
+    <radius>1</radius>
+  </surface>
+  <light>
+    <position>3 4 5</position>
+    <intensity>1 1 1</intensity>
+  </light>
+</scene>

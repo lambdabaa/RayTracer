@@ -38,21 +38,27 @@ public class Sphere extends Surface {
 		Vector3 e_minus_c = new Vector3();
 		e_minus_c.sub(rayIn.origin, center);
 		double a = rayIn.direction.dot(rayIn.direction);
-		double b = 2*(rayIn.direction.dot(e_minus_c));
-		double c = e_minus_c.dot(e_minus_c)-radius*radius;
-		double delta = b*b - 4*a*c;
-		if (delta >= 0){
-			if (delta == 0) outRecord.t = (-b + Math.sqrt(delta))/(2*a);
-			if (delta > 0) outRecord.t = Math.min((-b + Math.sqrt(delta))/(2*a),
-					(-b - Math.sqrt(delta))/(2*a));
-			rayIn.end = outRecord.t;
-			outRecord.surface = this;
-			//rayIn.direction.scale(outRecord.t);
-			//outRecord.location = rayIn.origin.add(rayIn.direction);
-			//outRecord.normal = 
-			return true;
-		} else return false;
-
+		double b = 2 * rayIn.direction.dot(e_minus_c);
+		double c = e_minus_c.dot(e_minus_c) - radius * radius;
+		double discriminant = b * b - 4 * a * c;
+		
+		if (discriminant < 0) {
+			return false;
+		}
+	
+		if (discriminant == 0) {
+			outRecord.t = (-b + Math.sqrt(discriminant))/(2 * a);
+		} else {
+			outRecord.t = Math.min((-b + Math.sqrt(discriminant))/(2*a),
+					(-b - Math.sqrt(discriminant))/(2*a));
+		}
+		
+		rayIn.end = outRecord.t;
+		outRecord.surface = this;
+		outRecord.location.add(rayIn.origin, rayIn.direction);
+		outRecord.location.scale(outRecord.t);
+		// TODO(gareth + daisy): outRecord.normal
+		return true;
 	}
 	
 	/**

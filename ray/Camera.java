@@ -53,15 +53,9 @@ public class Camera {
 	 * Initialize the derived view variables to prepare for using the camera.
 	 */
 	public void initView() {
-		// TODO: fill in this function. 
-		// set basis vectors according to projection normal and up direction
-		basisW = viewDir;
-		basisW.normalize();
-		basisW.scale(-1);
-		
+		basisW.set(projNormal);
 		basisU.cross(viewUp, basisW);
 		basisV.cross(basisW, basisU);
-		
 		initialized = true;
 	}
 	
@@ -73,15 +67,26 @@ public class Camera {
 	 * @param inV The v coord of the image point (range [0,1])
 	 */
 	public void getRay(Ray outRay, double inU, double inV) {
-		if (!initialized) initView();
+		if (!initialized) { 
+			initView();
+		}
+		
 		// TODO: fill in this function.
 		// map u coord from [0,1] to [-viewWidth/2, viewWidth/2], similarly for v
 		// then set the output ray, including its start and end points (hint: use Double.POSITIVE_INFINITY)
-		inU = inU*viewWidth - viewWidth/2;
-		inV = inV*viewHeight - viewHeight/2;
-		//outRay.direction.set(viewDirection.)
+		inU = inU * viewWidth - viewWidth/2;
+		inV = inV * viewHeight - viewHeight/2;
+		
 		outRay.origin.set(viewPoint);
 		outRay.start = 0;
 		outRay.end = Double.POSITIVE_INFINITY;
+		
+		Vector3 scaledW = Vector3.getScaledVector(basisW, -projDistance);		
+		Vector3 scaledU = Vector3.getScaledVector(basisU, inU);
+		Vector3 scaledV = Vector3.getScaledVector(basisV, inV);
+		
+		outRay.direction.set(scaledW);
+		outRay.direction.add(scaledU);
+		outRay.direction.add(scaledV);
 	}
 }

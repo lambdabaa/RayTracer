@@ -55,7 +55,12 @@ public class Camera {
 	public void initView() {
 		// TODO: fill in this function. 
 		// set basis vectors according to projection normal and up direction
-
+		basisW = viewDir;
+		basisW.normalize();
+		basisW.scale(-1);
+		
+		basisU.cross(viewUp, basisW);
+		basisV.cross(basisW, basisU);
 		
 		initialized = true;
 	}
@@ -72,7 +77,11 @@ public class Camera {
 		// TODO: fill in this function.
 		// map u coord from [0,1] to [-viewWidth/2, viewWidth/2], similarly for v
 		// then set the output ray, including its start and end points (hint: use Double.POSITIVE_INFINITY)
-
-		
+		inU = inU*viewWidth - viewWidth/2;
+		inV = inV*viewHeight - viewHeight/2;
+		//outRay.direction.set(viewDirection.)
+		outRay.origin.set(viewPoint);
+		outRay.start = 0;
+		outRay.end = Double.POSITIVE_INFINITY;
 	}
 }

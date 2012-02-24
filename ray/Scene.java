@@ -87,9 +87,15 @@ public class Scene {
 		for(Iterator<Surface> iter = surfaces.iterator(); iter.hasNext();) {
 			Surface s = iter.next();
 			
+
 			// now check for intersection (look in Surface class for appropriate method)
 			// and update ray start and/or end points
-			
+			if (s.intersect(outRecord, ray)) {
+				if (anyIntersection) return true;
+				tmp = outRecord;
+				ray.end = rayIn.end;
+				ret = true;
+			}
 		}
 		return ret;
 	}

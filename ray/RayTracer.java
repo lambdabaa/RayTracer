@@ -110,8 +110,10 @@ public class RayTracer {
 				
 				// TODO: Compute the ray (look in Camera class)
 				// map x, y to "unit" coords in [0, 1]
-
-				
+				Double u, v;
+				u = x*1.0/width;
+				v = y*1.0/height;
+				cam.getRay(ray, u, v);
 				
 				shadeRay(rayColor, scene, ray, scene.getLights(), 1, 1, false);
 				pixelColor.set(rayColor);
@@ -155,7 +157,7 @@ public class RayTracer {
 		// TODO: Find the first intersection of "ray" with the scene.
 		// Record intersection in eyeRecord. If it doesn't hit anything, just return (exit function).
 		// Hint: look in the Scene class for appropriate methods
-		
+		scene.intersect(eyeRecord, ray, false);
 		
 		// TODO: Compute "toEye" from eyeRecord.
 		// toEye is the ray from the hit position to the eye.

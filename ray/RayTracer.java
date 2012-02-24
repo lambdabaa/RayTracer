@@ -107,7 +107,7 @@ public class RayTracer {
 				
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
-				cam.getRay(ray, x * 1.0 / width, y * 1.0 / height);
+				cam.getRay(ray, (x + 0.5) / width, (y + 0.5) / height);
 				shadeRay(rayColor, scene, ray, scene.getLights(), 1, 1, false);
 				pixelColor.set(rayColor);
 				

@@ -26,25 +26,22 @@ public class Box extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO: fill in this function.
-		// You will need to implement the three-slab intersection test
-		double txMin = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
-		double txMax = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
-		if (txMin > txMax) {
-			swap(txMin, txMax);
-		}
+		double txMin, txMax, tyMin, tyMax, tzMin, tzMax;
 		
-		double tyMin = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
-		double tyMax = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
-		if (tyMin > tyMax) {
-			swap(tyMin, tyMax);
-		}
+		double tx1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
+		double tx2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
+		txMin = Math.min(tx1,tx2);
+		txMax = Math.max(tx1,tx2);
 		
-		double tzMin = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
-		double tzMax = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
-		if (tzMin > tzMax) {
-			swap(tzMin, tzMax);
-		}
+		double ty1 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
+		double ty2 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
+		tyMin = Math.min(ty1,ty2);
+		tyMax = Math.max(ty1,ty2);
+		
+		double tz1 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
+		double tz2 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
+		tzMin = Math.min(tz1,tz2);
+		tzMax = Math.max(tz1,tz2);
 		
 		double mint = Math.max(txMin, Math.max(tyMin, tzMin));
 		double maxt = Math.min(txMax, Math.min(tyMax, tzMax));
@@ -66,11 +63,6 @@ public class Box extends Surface {
 	public String toString() {
 		return "Box " + minPt + " " + maxPt + " " + shader + " end";
 	}
-	
-	private void swap(double a, double b) {
-		double tmp = a;
-		a = b;
-		b = tmp;
-	}
+
 }
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  First test scene, only uses spheres, Lambertian shading,
+      and one light directly above the center of the 3 spheres.
+ -->
+<scene>
+  <camera>
+    <viewPoint>5 4.5 4</viewPoint>
+    <viewDir>-5 -3.5 -4</viewDir>
+    <projNormal>5 3.5 4</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <viewWidth>0.75</viewWidth>
+    <viewHeight>0.76</viewHeight>
+  </camera>
+  <image>
+    300 300
+  </image>
+  <shader name="red" type="Lambertian">
+    <diffuseColor>1 .3 .2</diffuseColor>
+  </shader>
+  <shader name="green" type="Lambertian">
+    <diffuseColor>.2 1 .3</diffuseColor>
+  </shader>
+  <shader name="blue" type="Lambertian">
+    <diffuseColor>.2 .3 1</diffuseColor>
+  </shader>
+  <shader name="gray" type="Lambertian">
+    <diffuseColor>.5 .5 .5</diffuseColor>
+  </shader>
+  <surface type="Sphere">
+    <shader ref="red" />
+    <radius>1</radius>
+    <center>0 1 0.866</center>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="green" />
+    <radius>1</radius>
+    <center>1 1 -0.866</center>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="blue" />
+    <radius>1</radius>
+    <center>-1 1 -0.866</center>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="gray" />
+    <radius>100</radius>
+    <center>0 -100 0</center>
+  </surface>
+  <light>
+    <position>0 5 0</position>
+    <intensity>1 1 1</intensity>
+  </light>
+</scene>

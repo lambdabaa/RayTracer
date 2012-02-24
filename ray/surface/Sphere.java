@@ -41,7 +41,6 @@ public class Sphere extends Surface {
 		double b = 2 * rayIn.direction.dot(e_minus_c);
 		double c = e_minus_c.dot(e_minus_c) - radius * radius;
 		double discriminant = b * b - 4 * a * c;
-		
 		if (discriminant < 0) {
 			return false;
 		}
@@ -49,14 +48,16 @@ public class Sphere extends Surface {
 		if (discriminant == 0) {
 			outRecord.t = (-b + Math.sqrt(discriminant))/(2 * a);
 		} else {
-			outRecord.t = Math.min((-b + Math.sqrt(discriminant))/(2*a),
-					(-b - Math.sqrt(discriminant))/(2*a));
+			outRecord.t = Math.min((-b + Math.sqrt(discriminant)) / (2 * a),
+					(-b - Math.sqrt(discriminant)) / (2 * a));
 		}
+		
+		System.out.println(outRecord.t);
 		
 		rayIn.end = outRecord.t;
 		outRecord.surface = this;
-		outRecord.location.add(rayIn.origin, rayIn.direction);
-		outRecord.location.scale(outRecord.t);
+		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
+		outRecord.location.add(rayIn.origin, scaledDirection);
 		// TODO(gareth + daisy): outRecord.normal
 		return true;
 	}

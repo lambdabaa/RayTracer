@@ -54,8 +54,11 @@ public class Camera {
 	 */
 	public void initView() {
 		basisW.set(projNormal);
+		basisW.normalize();
 		basisU.cross(viewUp, basisW);
+		basisU.normalize();
 		basisV.cross(basisW, basisU);
+		basisV.normalize();
 		initialized = true;
 	}
 	
@@ -74,14 +77,14 @@ public class Camera {
 		// TODO: fill in this function.
 		// map u coord from [0,1] to [-viewWidth/2, viewWidth/2], similarly for v
 		// then set the output ray, including its start and end points (hint: use Double.POSITIVE_INFINITY)
-		inU = inU * viewWidth - viewWidth/2;
-		inV = inV * viewHeight - viewHeight/2;
+		inU = (inU + 0.5) * viewWidth  - viewWidth / 2;
+		inV = (inV + 0.5) * viewHeight - viewHeight / 2;
 		
 		outRay.origin.set(viewPoint);
 		outRay.start = 0;
 		outRay.end = Double.POSITIVE_INFINITY;
 		
-		Vector3 scaledW = Vector3.getScaledVector(basisW, -projDistance);		
+		Vector3 scaledW = Vector3.getScaledVector(basisW, -projDistance);
 		Vector3 scaledU = Vector3.getScaledVector(basisU, inU);
 		Vector3 scaledV = Vector3.getScaledVector(basisV, inV);
 		

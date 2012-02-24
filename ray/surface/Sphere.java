@@ -52,8 +52,6 @@ public class Sphere extends Surface {
 					(-b - Math.sqrt(discriminant)) / (2 * a));
 		}
 		
-		System.out.println(outRecord.t);
-		
 		rayIn.end = outRecord.t;
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);

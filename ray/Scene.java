@@ -91,10 +91,8 @@ public class Scene {
 				}
 				
 				if (tmp.t < mint) {
-					System.out.println("Updating t");
 					mint = tmp.t;
 					outRecord.set(tmp);
-					System.out.println("outRecord surface is null? " + (outRecord.surface == null ? "true" : "false"));
 				}
 			}
 		}

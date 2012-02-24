@@ -150,11 +150,8 @@ public class RayTracer {
 			return;
 		}
 		
-		System.out.println("We found an intersection!");
-		
 		toEye.sub(scene.camera.viewPoint, eyeRecord.location);
 		if (eyeRecord.surface != null) {
-			System.out.println("We should color it!");
 			outColor.set(255, 255, 255);
 //			eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 		}

@@ -54,6 +54,14 @@ public class Box extends Surface {
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
 		outRecord.location.add(rayIn.origin, scaledDirection);
+		//TODO: set normal
+		//Note to Gareth: the direction for the normal may not be correct for +/-
+		if (outRecord.location.x == maxPt.x) outRecord.normal.set(new Vector3(1,0,0));
+		if (outRecord.location.x == minPt.x) outRecord.normal.set(new Vector3(-1,0,0));
+		if (outRecord.location.y == maxPt.y) outRecord.normal.set(new Vector3(0,1,0));
+		if (outRecord.location.y == minPt.y) outRecord.normal.set(new Vector3(0,-1,0));
+		if (outRecord.location.z == maxPt.z) outRecord.normal.set(new Vector3(0,0,1));
+		if (outRecord.location.z == minPt.z) outRecord.normal.set(new Vector3(0,0,-1));
 		return true;
 	}
 	

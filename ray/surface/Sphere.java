@@ -57,6 +57,10 @@ public class Sphere extends Surface {
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
 		outRecord.location.add(rayIn.origin, scaledDirection);
 		// TODO(gareth + daisy): outRecord.normal
+		Vector3 normal = new Vector3();
+		normal.sub(outRecord.location, center);
+		normal.normalize();
+		outRecord.normal.set(normal);
 		return true;
 	}
 	

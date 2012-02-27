@@ -74,9 +74,6 @@ public class Camera {
 			initView();
 		}
 		
-		// TODO: fill in this function.
-		// map u coord from [0,1] to [-viewWidth/2, viewWidth/2], similarly for v
-		// then set the output ray, including its start and end points (hint: use Double.POSITIVE_INFINITY)
 		inU = inU * viewWidth  - viewWidth / 2;
 		inV = inV * viewHeight - viewHeight / 2;
 		

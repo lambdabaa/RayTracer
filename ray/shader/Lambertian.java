@@ -8,6 +8,7 @@ import ray.Scene;
 import ray.light.Light;
 import ray.math.Color;
 import ray.math.Vector3;
+import ray.surface.Surface;
 
 /**
  * A Lambertian material scatters light equally in all directions. BRDF value is
@@ -41,13 +42,17 @@ public class Lambertian extends Shader {
 		
 		// Get the light direction
 		// Compute the color value
-		
 		outColor.set(0, 0, 0);
 		
-		//can iterate over lights as like this:
-		//for (Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
-		
-		
+		for(Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
+			Light light = iter.next();
+				Vector3 l = new Vector3();
+				l.sub(light.position, record.location);
+				l.normalize();
+				outColor.r =diffuseColor.r * light.intensity.r * record.normal.dot(l);
+				outColor.g =diffuseColor.g * light.intensity.g * record.normal.dot(l);
+				outColor.b =diffuseColor.b * light.intensity.b * record.normal.dot(l);
+		}
 	}
 	
 	/**

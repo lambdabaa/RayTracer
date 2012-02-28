@@ -43,20 +43,11 @@ public class Sphere extends Surface {
 		if (discriminant < 0) {
 			return false;
 		}
-	
-		// TODO(garethaye): Refactor this and figure out why the min statement isn't wrong
-		if (discriminant == 0) {
-			outRecord.t = (-b + Math.sqrt(discriminant))/(2 * a);
-		} else {
-			outRecord.t = Math.min((-b + Math.sqrt(discriminant)) / (2 * a),
-					(-b - Math.sqrt(discriminant)) / (2 * a));
-		}
 		
-		rayIn.end = outRecord.t;
-		
+		outRecord.t = rayIn.end = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
 		outRecord.surface = this;
 		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
-		outRecord.normal.sub(outRecord.location, center);
+		outRecord.normal.sub(outRecord.location, center); // TODO(garethaye): Complain more about lib
 		outRecord.normal.normalize();
 		return true;
 	}

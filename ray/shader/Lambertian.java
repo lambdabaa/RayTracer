@@ -40,19 +40,18 @@ public class Lambertian extends Shader {
 		//   1. Add contribution to the final pixel from each light source. 
 		//   2. See how to use isShadowed().
 		
-		// Get the light direction
-		// Compute the color value
 		outColor.set(0, 0, 0);
 		
 		for(Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
 			Light light = iter.next();
-				Vector3 l = new Vector3();
-				l.sub(light.position, record.location);
-				l.normalize();
-				outColor.r =diffuseColor.r * light.intensity.r * record.normal.dot(l);
-				outColor.g =diffuseColor.g * light.intensity.g * record.normal.dot(l);
-				outColor.b =diffuseColor.b * light.intensity.b * record.normal.dot(l);
+			Vector3 l = new Vector3();
+			l.sub(light.position, record.location);
+			l.normalize();
+			outColor.r += diffuseColor.r * light.intensity.r * Math.max(0,record.normal.dot(l));
+			outColor.g += diffuseColor.g * light.intensity.g * Math.max(0,record.normal.dot(l));
+			outColor.b += diffuseColor.b * light.intensity.b * Math.max(0,record.normal.dot(l));
 		}
+		outColor.clamp(0, 1);
 	}
 	
 	/**

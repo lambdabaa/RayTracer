@@ -46,13 +46,25 @@ public class Phong extends Shader {
 		// Hint: 
 		//   1. Add contribution to the final pixel from each light source. 
 		//   2. See how to use isShadowed().
-		
-		// Get the light direction
-		// Calculate the half vector and normalize
-		// Compute the specular scale factor
-		// Compute the color value
-		
+
 		outColor.set(0, 0, 0);
+		
+		for(Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
+			Light light = iter.next();
+			Vector3 l = new Vector3();
+			l.sub(light.position, record.location);
+			l.normalize();
+			toEye.normalize();
+			
+			Vector3 h = new Vector3();
+			h.add(l,toEye);
+			h.normalize();
+			
+			outColor.r += diffuseColor.r * light.intensity.r * Math.max(0,record.normal.dot(l)) + specularColor.r * light.intensity.r * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+			outColor.g += diffuseColor.g * light.intensity.g * Math.max(0,record.normal.dot(l)) + specularColor.g * light.intensity.g * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+			outColor.b += diffuseColor.b * light.intensity.b * Math.max(0,record.normal.dot(l)) + specularColor.b * light.intensity.b * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+		}
+		outColor.clamp(0, 1);
 	}
 	
 	/**

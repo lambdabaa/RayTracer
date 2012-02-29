@@ -42,14 +42,13 @@ public class Lambertian extends Shader {
 		
 		outColor.set(0, 0, 0);
 		
-		for(Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
-			Light light = iter.next();
-			Vector3 l = new Vector3();
-			l.sub(light.position, record.location);
-			l.normalize();
-			outColor.r += diffuseColor.r * light.intensity.r * Math.max(0,record.normal.dot(l));
-			outColor.g += diffuseColor.g * light.intensity.g * Math.max(0,record.normal.dot(l));
-			outColor.b += diffuseColor.b * light.intensity.b * Math.max(0,record.normal.dot(l));
+		for (Light light : lights) {
+				Vector3 l = new Vector3();
+				l.sub(light.position, record.location);
+				l.normalize();
+				outColor.r += diffuseColor.r * light.intensity.r * record.normal.dot(l);
+				outColor.g += diffuseColor.g * light.intensity.g * record.normal.dot(l);
+				outColor.b += diffuseColor.b * light.intensity.b * record.normal.dot(l);
 		}
 		outColor.clamp(0, 1);
 	}

@@ -33,34 +33,22 @@ public class Sphere extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO: fill in this function.
-		//compute ray-sphere intersection
-		Vector3 e_minus_c = new Vector3();
-		e_minus_c.sub(rayIn.origin, center);
+		Vector3 eminusc = new Vector3();
+		eminusc.sub(rayIn.origin, center);
+		
 		double a = rayIn.direction.dot(rayIn.direction);
-		double b = 2 * rayIn.direction.dot(e_minus_c);
-		double c = e_minus_c.dot(e_minus_c) - radius * radius;
+		double b = 2 * rayIn.direction.dot(eminusc);
+		double c = eminusc.dot(eminusc) - radius * radius;
 		double discriminant = b * b - 4 * a * c;
 		if (discriminant < 0) {
 			return false;
 		}
-	
-		if (discriminant == 0) {
-			outRecord.t = (-b + Math.sqrt(discriminant))/(2 * a);
-		} else {
-			outRecord.t = Math.min((-b + Math.sqrt(discriminant)) / (2 * a),
-					(-b - Math.sqrt(discriminant)) / (2 * a));
-		}
 		
-		rayIn.end = outRecord.t;
+		outRecord.t = rayIn.end = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
 		outRecord.surface = this;
-		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
-		outRecord.location.add(rayIn.origin, scaledDirection);
-		// TODO(gareth + daisy): outRecord.normal
-		Vector3 normal = new Vector3();
-		normal.sub(outRecord.location, center);
-		normal.normalize();
-		outRecord.normal.set(normal);
+		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
+		outRecord.normal.sub(outRecord.location, center); // TODO(garethaye): Complain more about lib
+		outRecord.normal.normalize();
 		return true;
 	}
 	

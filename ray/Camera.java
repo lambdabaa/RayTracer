@@ -73,20 +73,12 @@ public class Camera {
 		if (!initialized) { 
 			initView();
 		}
-		
-		inU = inU * viewWidth  - viewWidth / 2;
-		inV = inV * viewHeight - viewHeight / 2;
-		
+    
 		outRay.origin.set(viewPoint);
 		outRay.start = 0;
 		outRay.end = Double.POSITIVE_INFINITY;
-		
-		Vector3 scaledW = Vector3.getScaledVector(basisW, -projDistance);
-		Vector3 scaledU = Vector3.getScaledVector(basisU, inU);
-		Vector3 scaledV = Vector3.getScaledVector(basisV, inV);
-		
-		outRay.direction.set(scaledW);
-		outRay.direction.add(scaledU);
-		outRay.direction.add(scaledV);
+		outRay.direction.set(Vector3.getScaledVector(basisW, -projDistance));
+		outRay.direction.add(Vector3.getScaledVector(basisU, inU * viewWidth - viewWidth / 2));
+		outRay.direction.add(Vector3.getScaledVector(basisV, inV * viewHeight - viewHeight / 2));
 	}
 }

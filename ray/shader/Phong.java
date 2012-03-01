@@ -49,8 +49,7 @@ public class Phong extends Shader {
 
 		outColor.set(0, 0, 0);
 		
-		for(Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
-			Light light = iter.next();
+		for (Light light : lights) {
 			Vector3 l = new Vector3();
 			l.sub(light.position, record.location);
 			l.normalize();

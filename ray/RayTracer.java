@@ -152,7 +152,6 @@ public class RayTracer {
 		
 		toEye.sub(scene.camera.viewPoint, eyeRecord.location);
 		if (eyeRecord.surface != null) {
-			//outColor.set(1-Math.atan(eyeRecord.t)*2/Math.PI,1-Math.atan(eyeRecord.t)*2/Math.PI,1-Math.atan(eyeRecord.t)*2/Math.PI);
 			eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 		}
 	}

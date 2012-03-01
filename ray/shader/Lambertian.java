@@ -35,9 +35,6 @@ public class Lambertian extends Shader {
 	 */
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
 			IntersectionRecord record) {
-		// TODO: fill in this function.
-		// Hint: 
-		//   1. Add contribution to the final pixel from each light source. 
 		//   2. See how to use isShadowed().
 		
 		outColor.set(0, 0, 0);

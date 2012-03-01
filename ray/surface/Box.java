@@ -6,6 +6,7 @@ import ray.math.Point3;
 import ray.math.Vector3;
 
 public class Box extends Surface {
+	protected final Double EPSILON = 0.000001;
 	
 	/* The corner of the box with the smallest x, y, and z components. */
 	protected final Point3 minPt = new Point3();
@@ -54,15 +55,20 @@ public class Box extends Surface {
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
 		outRecord.location.add(rayIn.origin, scaledDirection);
-		//TODO: set normal
-		//Note to Gareth: the direction for the normal may not be correct for +/-
-		if ((outRecord.location.x - maxPt.x) <= .001 || (outRecord.location.x - minPt.x) <= .001) { 
-		    outRecord.normal.set(new Vector3(-1, 0, 0));
-		  } else if ((outRecord.location.y - maxPt.y) <= .001 || (outRecord.location.y - minPt.y) <= .001) { 
-		    outRecord.normal.set(new Vector3(0, -1, 0));
-		  } else if ((outRecord.location.z - maxPt.z) <= .001 || (outRecord.location.z - minPt.z) <= .001) {
-		    outRecord.normal.set(new Vector3(0, 0, -1));
-		  }
+		
+		if (Math.abs(outRecord.location.x - maxPt.x) <= EPSILON) { 
+			outRecord.normal.set(new Vector3(1, 0, 0));
+		} else if (Math.abs(outRecord.location.x - minPt.x) <= EPSILON) {
+			outRecord.normal.set(new Vector3(-1, 0, 0));
+		} else if (Math.abs(outRecord.location.y - maxPt.y) <= EPSILON) {
+			outRecord.normal.set(new Vector3(0, 1, 0));
+		} else if (Math.abs(outRecord.location.y - minPt.y) <= EPSILON) { 
+			outRecord.normal.set(new Vector3(0, -1, 0));
+		} else if (Math.abs(outRecord.location.z - maxPt.z) <= EPSILON) {
+			outRecord.normal.set(new Vector3(0, 0, 1));
+		} else if (Math.abs(outRecord.location.z - minPt.z) <= EPSILON) {
+			outRecord.normal.set(new Vector3(0, 0, -1));
+		}
 		return true;
 	}
 	

@@ -6,6 +6,7 @@ import ray.math.Point3;
 import ray.math.Vector3;
 
 public class Box extends Surface {
+	protected final Double EPSILON = 0.000001;
 	
 	/* The corner of the box with the smallest x, y, and z components. */
 	protected final Point3 minPt = new Point3();
@@ -26,10 +27,49 @@ public class Box extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO: fill in this function.
-		// You will need to implement the three-slab intersection test
+		double txMin, txMax, tyMin, tyMax, tzMin, tzMax;
 		
-		return false;
+		double tx1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
+		double tx2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
+		txMin = Math.min(tx1,tx2);
+		txMax = Math.max(tx1,tx2);
+		
+		double ty1 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
+		double ty2 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
+		tyMin = Math.min(ty1,ty2);
+		tyMax = Math.max(ty1,ty2);
+		
+		double tz1 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
+		double tz2 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
+		tzMin = Math.min(tz1,tz2);
+		tzMax = Math.max(tz1,tz2);
+		
+		double mint = Math.max(txMin, Math.max(tyMin, tzMin));
+		double maxt = Math.min(txMax, Math.min(tyMax, tzMax));
+		if (mint > maxt) {
+			return false;
+		}
+		
+		outRecord.t = mint;
+		rayIn.end = outRecord.t;
+		outRecord.surface = this;
+		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
+		outRecord.location.add(rayIn.origin, scaledDirection);
+		
+		if (Math.abs(outRecord.location.x - maxPt.x) <= EPSILON) { 
+			outRecord.normal.set(new Vector3(1, 0, 0));
+		} else if (Math.abs(outRecord.location.x - minPt.x) <= EPSILON) {
+			outRecord.normal.set(new Vector3(-1, 0, 0));
+		} else if (Math.abs(outRecord.location.y - maxPt.y) <= EPSILON) {
+			outRecord.normal.set(new Vector3(0, 1, 0));
+		} else if (Math.abs(outRecord.location.y - minPt.y) <= EPSILON) { 
+			outRecord.normal.set(new Vector3(0, -1, 0));
+		} else if (Math.abs(outRecord.location.z - maxPt.z) <= EPSILON) {
+			outRecord.normal.set(new Vector3(0, 0, 1));
+		} else if (Math.abs(outRecord.location.z - minPt.z) <= EPSILON) {
+			outRecord.normal.set(new Vector3(0, 0, -1));
+		}
+		return true;
 	}
 	
 	/**
@@ -38,5 +78,6 @@ public class Box extends Surface {
 	public String toString() {
 		return "Box " + minPt + " " + maxPt + " " + shader + " end";
 	}
+
 }
 

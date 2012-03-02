@@ -53,7 +53,7 @@ public class Cylinder extends Surface {
 		if (outRecord.location.z - center.z < height/2.0 && outRecord.location.z - center.z > -height/2.0) {
 			outRecord.normal.set(new Vector3(outRecord.location.x, outRecord.location.y, 0));
 			outRecord.normal.normalize();
-			System.out.println("t1 = "+t1);
+			//System.out.println("t1 = "+t1);
 		} else {
 			t1 = 100000.0;
 		}

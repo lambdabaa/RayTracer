@@ -41,11 +41,13 @@ public class Lambertian extends Shader {
 		Vector3 l = new Vector3();
 		
 		for (Light light : lights) {
+			if (!isShadowed(scene, light, record)) {
 				l.sub(light.position, record.location);
 				l.normalize();
-				outColor.r += outColor.r + diffuseColor.r * light.intensity.r * Math.max(0, record.normal.dot(l));
-				outColor.g += outColor.g + diffuseColor.g * light.intensity.g * Math.max(0, record.normal.dot(l));
-				outColor.b += outColor.b + diffuseColor.b * light.intensity.b * Math.max(0, record.normal.dot(l));
+				outColor.r = outColor.r + diffuseColor.r * light.intensity.r * Math.max(0, record.normal.dot(l));
+				outColor.g = outColor.g + diffuseColor.g * light.intensity.g * Math.max(0, record.normal.dot(l));
+				outColor.b = outColor.b + diffuseColor.b * light.intensity.b * Math.max(0, record.normal.dot(l));
+			}
 		}
 		
 		outColor.clamp(0, 1);

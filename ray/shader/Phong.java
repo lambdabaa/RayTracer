@@ -45,20 +45,22 @@ public class Phong extends Shader {
 		//   2. See how to use isShadowed().
 
 		outColor.set(0, 0, 0);
+		Vector3 l = new Vector3();
 		
 		for (Light light : lights) {
-			Vector3 l = new Vector3();
-			l.sub(light.position, record.location);
-			l.normalize();
-			toEye.normalize();
-			
-			Vector3 h = new Vector3();
-			h.add(l,toEye);
-			h.normalize();
-			
-			outColor.r += diffuseColor.r * light.intensity.r * Math.max(0,record.normal.dot(l)) + specularColor.r * light.intensity.r * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
-			outColor.g += diffuseColor.g * light.intensity.g * Math.max(0,record.normal.dot(l)) + specularColor.g * light.intensity.g * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
-			outColor.b += diffuseColor.b * light.intensity.b * Math.max(0,record.normal.dot(l)) + specularColor.b * light.intensity.b * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+			if (!isShadowed(scene, light, record)) {
+				l.sub(light.position, record.location);
+				l.normalize();
+				toEye.normalize();
+				
+				Vector3 h = new Vector3();
+				h.add(l,toEye);
+				h.normalize();
+				
+				outColor.r += diffuseColor.r * light.intensity.r * Math.max(0,record.normal.dot(l)) + specularColor.r * light.intensity.r * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+				outColor.g += diffuseColor.g * light.intensity.g * Math.max(0,record.normal.dot(l)) + specularColor.g * light.intensity.g * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+				outColor.b += diffuseColor.b * light.intensity.b * Math.max(0,record.normal.dot(l)) + specularColor.b * light.intensity.b * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
+			}
 		}
 		outColor.clamp(0, 1);
 	}

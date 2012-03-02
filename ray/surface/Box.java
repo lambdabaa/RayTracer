@@ -6,7 +6,7 @@ import ray.math.Point3;
 import ray.math.Vector3;
 
 public class Box extends Surface {
-	protected final Double EPSILON = 0.000001;
+	private final static Double EPSILON = 0.000001;
 	
 	/* The corner of the box with the smallest x, y, and z components. */
 	protected final Point3 minPt = new Point3();
@@ -55,7 +55,6 @@ public class Box extends Surface {
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
 		outRecord.location.add(rayIn.origin, scaledDirection);
-		
 		if (Math.abs(outRecord.location.x - maxPt.x) <= EPSILON) { 
 			outRecord.normal.set(new Vector3(1, 0, 0));
 		} else if (Math.abs(outRecord.location.x - minPt.x) <= EPSILON) {
@@ -69,6 +68,7 @@ public class Box extends Surface {
 		} else if (Math.abs(outRecord.location.z - minPt.z) <= EPSILON) {
 			outRecord.normal.set(new Vector3(0, 0, -1));
 		}
+		
 		return true;
 	}
 	

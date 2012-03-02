@@ -8,7 +8,7 @@ import ray.math.Vector3;
 
 public class Cylinder extends Surface {
 	
-	/** The center of the bottom of the cylinder  x , y ,z components. */
+	/** The center of the cylinder. */
 	protected final Point3 center = new Point3();
 	public void setCenter(Point3 center) { this.center.set(center); }
 	
@@ -16,7 +16,8 @@ public class Cylinder extends Surface {
 	protected double radius = 1.0;
 	public void setRadius(double radius) { this.radius = radius; }
 	
-	/** The height of the cylinder. */
+	/** The height of the cylinder in the z-direction.
+	 *  The cylinder's extent in z is center.z +/- height/2 */
 	protected double height = 1.0;
 	public void setHeight(double height) { this.height = height; }
 	
@@ -48,29 +49,30 @@ public class Cylinder extends Surface {
 		outRecord.surface = this;
 		Double t1 = rayIn.end = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
 		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t1));
-		if (eminusc.z < height && eminusc.z > 0) {
+		
+		if (outRecord.location.z - center.z < height/2.0 && outRecord.location.z - center.z > -height/2.0) {
 			outRecord.normal.set(new Vector3(outRecord.location.x, outRecord.location.y, 0));
 			outRecord.normal.normalize();
+			System.out.println("t1 = "+t1);
 		} else {
-			t1 = 1000.0;
+			t1 = 100000.0;
 		}
 		
-		Double t2 = (height - eminusc.z) / rayIn.direction.z;
-		Double t3 = (0 - eminusc.z) / rayIn.direction.z;
-		//System.out.println("t1 "+t1+"t2 "+t2+"t3 "+t3);
+		Double t2 = (height/2.0 - eminusc.z) / rayIn.direction.z;
+		Double t3 = (-height/2.0 - eminusc.z) / rayIn.direction.z;
+		//System.out.println("t1 "+t1+" t2 "+t2+" t3 "+t3);
 		outRecord.t = Math.min(t1, Math.min(t2, t3));
 		
-		if (t2 < t1 & t2 < t3) {
-			outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t2));
-			outRecord.normal.set(new Vector3(0,0,1));
-		} else if (t3 < t1 & t3 < t2){
-			outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t3));	
+		if (outRecord.t == t3) {
+			outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t3));
+			rayIn.end = t3;
 			outRecord.normal.set(new Vector3(0,0,-1));
-		}
-
-		//System.out.println(outRecord.normal);
+		} else if (outRecord.t == t2) {
+			//outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t2));	
+			rayIn.end = t2;
+			//outRecord.normal.set(new Vector3(0,0,1));
+		} 
 		return true;
-		return false;
 	}
 	
 	/**

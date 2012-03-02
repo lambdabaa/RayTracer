@@ -174,12 +174,5 @@ public class Vector3 extends Tuple3 {
     this.z += scale * vector.z;
 
   }
-  
-  public static Vector3 getScaledVector(Vector3 unitVector, double scale) {
-	Vector3 vector = new Vector3();
-	vector.set(unitVector);
-	vector.scale(scale);
-	return vector;
-  }
 
 }

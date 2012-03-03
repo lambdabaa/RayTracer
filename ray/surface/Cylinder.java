@@ -74,7 +74,6 @@ public class Cylinder extends Surface {
 			t3 = 10000.0;
 		}
 		
-		System.out.println("t1 "+t1+" t2 "+t2+" t3 "+t3);
 		outRecord.t = Math.min(t1, Math.min(t2, t3));
 		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
 		rayIn.end = outRecord.t;

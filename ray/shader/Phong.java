@@ -48,7 +48,7 @@ public class Phong extends Shader {
 		Vector3 l = new Vector3();
 		
 		for (Light light : lights) {
-			if (!isShadowed(scene, light, record)) {
+			if (isShadowed(scene, light, record)) {
 				l.sub(light.position, record.location);
 				l.normalize();
 				toEye.normalize();

@@ -37,6 +37,7 @@ public class Cylinder extends Surface {
 		// TODO (soon): fill in this function.
 		Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
+		IntersectionRecord tmp = new IntersectionRecord();
 		
 		double a = rayIn.direction.x * rayIn.direction.x + rayIn.direction.y * rayIn.direction.y;
 		double b = 2 * (rayIn.direction.x * eminusc.x + rayIn.direction.y * eminusc.y);
@@ -48,30 +49,44 @@ public class Cylinder extends Surface {
 		
 		outRecord.surface = this;
 		Double t1 = rayIn.end = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
-		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t1));
+		tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t1));
 		
-		if (outRecord.location.z - center.z < height/2.0 && outRecord.location.z - center.z > -height/2.0) {
-			outRecord.normal.set(new Vector3(outRecord.location.x, outRecord.location.y, 0));
-			outRecord.normal.normalize();
-			//System.out.println("t1 = "+t1);
+		if (tmp.location.z - center.z < height/2.0 && tmp.location.z - center.z > -height/2.0) {
+			tmp.normal.set(new Vector3(outRecord.location.x - center.x, outRecord.location.y - center.y, 0));
+			tmp.normal.normalize();
 		} else {
-			t1 = 100000.0;
+			t1 = 10000.0;
 		}
 		
-		Double t2 = (height/2.0 - eminusc.z) / rayIn.direction.z;
-		Double t3 = (-height/2.0 - eminusc.z) / rayIn.direction.z;
-		//System.out.println("t1 "+t1+" t2 "+t2+" t3 "+t3);
-		outRecord.t = Math.min(t1, Math.min(t2, t3));
+		Double t2 = (height/2.0 - eminusc.z) / rayIn.direction.z;	
+		tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t2));
+		if ((tmp.location.x - center.x) * (tmp.location.x - center.x) + (tmp.location.y - center.y) * (tmp.location.y - center.y) - radius * radius < 0){
+			tmp.normal.set(0,0,1);
+		} else {
+			t2 = 10000.0;
+		}
 		
+		Double t3 = (-height/2.0 - eminusc.z) / rayIn.direction.z;
+		tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t3));
+		if ((tmp.location.x - center.x) * (tmp.location.x - center.x) + (tmp.location.y - center.y) * (tmp.location.y - center.y) - radius * radius < 0){
+			tmp.normal.set(0,0,-1);
+		} else {
+			t3 = 10000.0;
+		}
+		
+		System.out.println("t1 "+t1+" t2 "+t2+" t3 "+t3);
+		outRecord.t = Math.min(t1, Math.min(t2, t3));
+		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
+		rayIn.end = outRecord.t;
+		if (outRecord.t >= 10000.0) return false;
 		if (outRecord.t == t3) {
-			outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t3));
-			rayIn.end = t3;
 			outRecord.normal.set(new Vector3(0,0,-1));
 		} else if (outRecord.t == t2) {
-			//outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t2));	
-			rayIn.end = t2;
-			//outRecord.normal.set(new Vector3(0,0,1));
-		} 
+			outRecord.normal.set(new Vector3(0,0,1));
+		} else {
+			outRecord.normal.set(new Vector3(outRecord.location.x - center.x, outRecord.location.y - center.y, 0));
+			outRecord.normal.normalize();
+		}
 		return true;
 	}
 	

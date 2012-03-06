@@ -1,7 +1,6 @@
 package ray.shader;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import ray.IntersectionRecord;
 import ray.Scene;

@@ -258,13 +258,8 @@
     <radius>0.4</radius>
   </surface>
 
- 
-  <light name="from positive y">
-    <position>5 10 0</position>
-    <intensity>.2 .2 .2</intensity>
-  </light>
   <light name="sunlight">
-    <position>-10 5 5</position>
+    <position>-10 5 10</position>
     <intensity>1 1 1</intensity>
   </light>
   <light name="roof light">
@@ -273,6 +268,6 @@
   </light>
   <light name="lamp">
     <position>0.4 7.15 2.74</position>
-    <intensity>1 1 1</intensity>
+    <intensity>0.4 0.4 0.4</intensity>
   </light>
 </scene>

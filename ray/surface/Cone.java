@@ -7,20 +7,24 @@ import ray.math.Point3;
 
 public class Cone extends Surface {
 	
-	/** The center of the the truncated cone (x,y,z components). */
-	protected final Point3 center = new Point3();
-	public void setCenter(Point3 center) { this.center.set(center); }
+	/** The center of the the truncated cone. */
+    protected final Point3 center = new Point3();
+    public void setCenter(Point3 center) { this.center.set(center); }
+    
+    /** The z-location of the tip of the cone. */
+    protected double tipz = 0.0;
+    public void setTipz(double tipz) { this.tipz = tipz; }
+    
+    /** The radius of the cone in the plane z = center.z. */
+    protected double radius = 1.0;
+    public void setRadius(double radius) { this.radius = radius; }
 
-	/** The full opening angle of the cone. */
-	protected double theta = 60.0;
-	public void setTheta(double theta) { this.theta = theta; }
-
-	/** The height of the cone.
-	 * Truncation of the cone occurs at center-height/2 and center+height/2
-	 */
-	protected double height = 1.0;
-	public void setHeight(double height) { this.height = height; }
-
+    /** The height of the cone.
+     *  Truncation of the cone occurs at center.z - height/2 and center.z + height/2
+     */
+    protected double height = 1.0;
+    public void setHeight(double height) { this.height = height; }
+    
 	public Cone() { }
 
 	/**
@@ -43,6 +47,6 @@ public class Cone extends Surface {
 	 * @see Object#toString()
 	 */
 	public String toString() {
-		return "Cone " + center + " "+ theta + " "+ height + " "+ shader + " end";
+        return "Cone " + center + " "+ radius + " "+ height + " "+ tipz + " "+ shader + " end";
 	}
 }

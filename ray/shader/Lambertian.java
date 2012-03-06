@@ -35,8 +35,6 @@ public class Lambertian extends Shader {
 	 */
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
 			IntersectionRecord record) {
-		//   2. See how to use isShadowed().
-		
 		outColor.set(0, 0, 0);
 		Vector3 l = new Vector3();
 		

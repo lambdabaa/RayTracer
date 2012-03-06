@@ -41,9 +41,7 @@ public class Phong extends Shader {
 	 * @param record The intersection record, which hold the location, normal, etc.
 	 */
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
-			IntersectionRecord record) {	
-		//   2. See how to use isShadowed().
-
+			IntersectionRecord record) {
 		outColor.set(0, 0, 0);
 		Vector3 l = new Vector3();
 		

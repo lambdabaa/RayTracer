@@ -48,7 +48,7 @@ public class Phong extends Shader {
 		Vector3 l = new Vector3();
 		
 		for (Light light : lights) {
-			if (isShadowed(scene, light, record)) {
+			if (!isShadowed(scene, light, record)) {
 				l.sub(light.position, record.location);
 				l.normalize();
 				toEye.normalize();
@@ -62,6 +62,7 @@ public class Phong extends Shader {
 				outColor.b += diffuseColor.b * light.intensity.b * Math.max(0,record.normal.dot(l)) + specularColor.b * light.intensity.b * Math.pow(Math.max(0,record.normal.dot(h)), exponent);
 			}
 		}
+		
 		outColor.clamp(0, 1);
 	}
 	

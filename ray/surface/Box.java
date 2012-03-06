@@ -46,12 +46,11 @@ public class Box extends Surface {
 		
 		double mint = Math.max(txMin, Math.max(tyMin, tzMin));
 		double maxt = Math.min(txMax, Math.min(tyMax, tzMax));
-		if (mint > maxt) {
+		if (mint > maxt || mint > rayIn.end || mint < rayIn.start) {
 			return false;
 		}
 		
 		outRecord.t = mint;
-		rayIn.end = outRecord.t;
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
 		outRecord.location.add(rayIn.origin, scaledDirection);

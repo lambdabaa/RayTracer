@@ -82,12 +82,11 @@ public class Scene {
 		ray.end = rayIn.end;
 		
 		double mint = Double.MAX_VALUE;
-		for(Iterator<Surface> iter = surfaces.iterator(); iter.hasNext();) {
-			Surface s = iter.next();
+		for (Surface s : surfaces) {
 			if (s.intersect(tmp, ray)) {
 				ret = true;
 				if (anyIntersection) {
-					return true;
+				  return true;
 				}
 				
 				if (tmp.t < mint) {

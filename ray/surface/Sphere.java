@@ -44,7 +44,12 @@ public class Sphere extends Surface {
 			return false;
 		}
 		
-		outRecord.t = rayIn.end = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
+		double t = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
+		if (t > rayIn.end || t < rayIn.start) {
+		  return false;
+		}
+		
+		outRecord.t = rayIn.end = t;
 		outRecord.surface = this;
 		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
 		outRecord.normal.sub(outRecord.location, center); // TODO(garethaye): Complain more about lib

@@ -42,10 +42,11 @@ public abstract class Shader {
 		// TODO (soon): fill in this function
 		Vector3 shadowDirection = new Vector3();
 		shadowDirection.sub(light.position, record.location);
+		double distance = shadowDirection.length();
 		shadowDirection.normalize();
 		Ray shadowRay = new Ray(record.location, shadowDirection);
 		shadowRay.start = Ray.EPSILON;
-		return (scene.getAnyIntersection(shadowRay));
-
+		shadowRay.end = distance - Ray.EPSILON;
+		return scene.getAnyIntersection(shadowRay);
 	}
 }

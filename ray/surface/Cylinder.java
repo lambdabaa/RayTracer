@@ -86,12 +86,12 @@ public class Cylinder extends Surface {
       }
     }
     
-    if (t == null) {
+    if (t == null || t > rayIn.end || t < rayIn.start) {
       return false;
     }
 		
     outRecord.surface = this;
-		outRecord.t = rayIn.end = t;
+		outRecord.t = t;
 		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t));
 		return true;
 	}

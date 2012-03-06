@@ -1,9 +1,10 @@
 package ray.surface;
 
+import java.util.Arrays;
+
 import ray.IntersectionRecord;
 import ray.Ray;
 import ray.math.Point3;
-//import ray.math.Vector3;
 import ray.math.Vector3;
 
 public class Cylinder extends Surface {
@@ -34,58 +35,64 @@ public class Cylinder extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO (soon): fill in this function.
 		Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
-		IntersectionRecord tmp = new IntersectionRecord();
 		
-		double a = rayIn.direction.x * rayIn.direction.x + rayIn.direction.y * rayIn.direction.y;
+		double a = Math.pow(rayIn.direction.x, 2) + Math.pow(rayIn.direction.y, 2);
 		double b = 2 * (rayIn.direction.x * eminusc.x + rayIn.direction.y * eminusc.y);
-		double c = eminusc.x * eminusc.x + eminusc.y * eminusc.y - radius * radius;
+		double c = Math.pow(eminusc.x, 2) + Math.pow(eminusc.y, 2) - Math.pow(radius, 2);
 		double discriminant = b * b - 4 * a * c;
 		if (discriminant < 0) {
 			return false;
 		}
 		
-		outRecord.surface = this;
-		Double t1 = rayIn.end = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
-		tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t1));
+    double t1 = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
+    double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
+    double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
+    
+    // We'll iterate through the values in sorted order so we find closest intersection first
+    double[] tarr = {t1, t2, t3};
+    Arrays.sort(tarr);
+    
+    Double t = null;                 // The lowest intersection we find
+    for (double x : tarr) {
+      IntersectionRecord tmp = new IntersectionRecord();
+      tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, x));
+      
+      if (x == t1) {
+        if (Math.abs(tmp.location.z - center.z) < height / 2.0) {
+          outRecord.normal.set(
+              new Vector3(
+                  outRecord.location.x - center.x, 
+                  outRecord.location.y - center.y,
+                  0));
+          outRecord.normal.normalize();
+          t = x;
+          break;
+        }
+      } else {
+        if (Math.pow(tmp.location.x - center.x, 2)
+            + Math.pow(tmp.location.y - center.y, 2) 
+            - Math.pow(radius, 2) <= 0) {
+          if (x == t2) {
+            outRecord.normal.set(0, 0, 1);
+          } else if (x == t3) {
+            outRecord.normal.set(0, 0, -1);
+          }
+          
+          t = x;
+          break;
+        }
+      }
+    }
+    
+    if (t == null) {
+      return false;
+    }
 		
-		if (tmp.location.z - center.z < height/2.0 && tmp.location.z - center.z > -height/2.0) {
-			tmp.normal.set(new Vector3(outRecord.location.x - center.x, outRecord.location.y - center.y, 0));
-			tmp.normal.normalize();
-		} else {
-			t1 = 10000.0;
-		}
-		
-		Double t2 = (height/2.0 - eminusc.z) / rayIn.direction.z;	
-		tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t2));
-		if ((tmp.location.x - center.x) * (tmp.location.x - center.x) + (tmp.location.y - center.y) * (tmp.location.y - center.y) - radius * radius < 0){
-			tmp.normal.set(0,0,1);
-		} else {
-			t2 = 10000.0;
-		}
-		
-		Double t3 = (-height/2.0 - eminusc.z) / rayIn.direction.z;
-		tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t3));
-		if ((tmp.location.x - center.x) * (tmp.location.x - center.x) + (tmp.location.y - center.y) * (tmp.location.y - center.y) - radius * radius < 0){
-			tmp.normal.set(0,0,-1);
-		} else {
-			t3 = 10000.0;
-		}
-		
-		outRecord.t = Math.min(t1, Math.min(t2, t3));
+    outRecord.surface = this;
+		outRecord.t = rayIn.end = t;
 		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
-		rayIn.end = outRecord.t;
-		if (outRecord.t >= 10000.0) return false;
-		if (outRecord.t == t3) {
-			outRecord.normal.set(new Vector3(0,0,-1));
-		} else if (outRecord.t == t2) {
-			outRecord.normal.set(new Vector3(0,0,1));
-		} else {
-			outRecord.normal.set(new Vector3(outRecord.location.x - center.x, outRecord.location.y - center.y, 0));
-			outRecord.normal.normalize();
-		}
 		return true;
 	}
 	

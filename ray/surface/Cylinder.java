@@ -63,8 +63,8 @@ public class Cylinder extends Surface {
         if (Math.abs(tmp.location.z - center.z) < height / 2.0) {
           outRecord.normal.set(
               new Vector3(
-                  outRecord.location.x - center.x, 
-                  outRecord.location.y - center.y,
+                  tmp.location.x - center.x, 
+                  tmp.location.y - center.y,
                   0));
           outRecord.normal.normalize();
           t = x;
@@ -92,7 +92,7 @@ public class Cylinder extends Surface {
 		
     outRecord.surface = this;
 		outRecord.t = rayIn.end = t;
-		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, outRecord.t));
+		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t));
 		return true;
 	}
 	

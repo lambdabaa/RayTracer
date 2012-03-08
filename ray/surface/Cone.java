@@ -72,13 +72,7 @@ public class Cone extends Surface {
 	      
 	    if (x == t1) {
 	      if (Math.abs(tmp.location.z - center.z) < height) {
-	        Vector3 radialUnit = new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, 0);
-	        radialUnit.normalize();
-	        outRecord.normal.set(
-	            new Vector3(
-	                radialUnit.x, 
-	                radialUnit.y,
-	                R / H));
+	        outRecord.normal.set(new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, R / H));
 	        outRecord.normal.normalize();
 	        t = x;
 	        break;

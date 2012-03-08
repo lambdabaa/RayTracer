@@ -41,50 +41,52 @@ public class Cone extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO (soon): fill in this function.
 		Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
 		
-		double H = tipz - center.z;
-		double R = - radius * H / (rayIn.direction.z - H);
+		double H = Math.abs(tipz - center.z);
+		double R = radius;
 		double s = Math.pow(R, 2) / Math.pow(H,  2);
 			
 		double a = Math.pow(rayIn.direction.x, 2) + Math.pow(rayIn.direction.y, 2) - s * Math.pow(rayIn.direction.z, 2);
-		double b = 2 * (rayIn.direction.x * eminusc.x + rayIn.direction.y * eminusc.y - s * (rayIn.direction.z - H) * rayIn.direction.z);
+		double b = 2 * (rayIn.direction.x * eminusc.x + rayIn.direction.y * eminusc.y - s * (eminusc.z - H) * rayIn.direction.z);
 		double c = Math.pow(eminusc.x, 2) + Math.pow(eminusc.y, 2) - s * Math.pow(eminusc.z - H, 2);
 		double discriminant = b * b - 4 * a * c;
 		if (discriminant < 0) {
 			return false;
 		}
 		
-		double t1 = Math.min(-b + Math.sqrt(discriminant) / (2 * a), -b - Math.sqrt(discriminant) / (2 * a));
+    double t1a = (-b + Math.sqrt(discriminant)) / (2 * a);
+    double t1b = (-b - Math.sqrt(discriminant)) / (2 * a);
 		double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
 	  double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
 	    
 	  // We'll iterate through the values in sorted order so we find closest intersection first
-	  double[] tarr = {t1, t2, t3};
+	  double[] tarr = {t1a, t1b, t2, t3};
 	  Arrays.sort(tarr);
 	  
 	  Double t = null;                 // The lowest intersection we find
 	  for (double x : tarr) {
 	    IntersectionRecord tmp = new IntersectionRecord();
 	    tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, x));
-	      
-	    if (x == t1) {
-	      if (Math.abs(tmp.location.z - center.z) < height) {
-	        outRecord.normal.set(new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, R / H));
+	    
+	    if (x == t1a || x == t1b) {
+	      if (Math.abs(tmp.location.z - center.z) < height / 2) {
+	        outRecord.normal.set(new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, 0));
+	        outRecord.normal.normalize();
+	        outRecord.normal.add(new Vector3(0, 0, R / H));
 	        outRecord.normal.normalize();
 	        t = x;
 	        break;
 	      }
 	    } else if (x == t2) {
-	      if (Math.pow(tmp.location.x - center.x, 2) + Math.pow(tmp.location.y - center.y, 2) - Math.pow(R / H, 2) <= 0) {
+	      if (Math.pow(tmp.location.x - center.x, 2) + Math.pow(tmp.location.y - center.y, 2) - Math.pow((R / H) * (H - height / 2), 2) <= 0) {
 	        outRecord.normal.set(0, 0, 1);
 	        t = x;
 	        break;
 	      }
 	    } else if (x == t3) {
-	      if (Math.pow(tmp.location.x - center.x, 2) + Math.pow(tmp.location.y - center.y, 2) - Math.pow(R, 2) <= 0) {
+	      if (Math.pow(tmp.location.x - center.x, 2) + Math.pow(tmp.location.y - center.y, 2) - Math.pow((R / H) * (H + height / 2), 2) <= 0) {
 	        outRecord.normal.set(0, 0, -1);
 	        t = x;
 	        break;

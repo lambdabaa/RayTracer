@@ -46,7 +46,7 @@ public class Cylinder extends Surface {
 			return false;
 		}
 		
-    double t1 = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
+		double t1 = Math.min((-b + Math.sqrt(discriminant)) / (2 * a), (-b - Math.sqrt(discriminant)) / (2 * a));
     double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
     double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
     

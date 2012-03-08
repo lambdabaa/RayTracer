@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- A snow man with a cone nose. -->
+<scene>
+  <camera>
+    <viewPoint>36 22 45</viewPoint>
+    <viewDir>-1 -1 -2</viewDir>
+    <projNormal>1 1 2</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>4</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="black" type="Phong">
+    <diffuseColor>.01 .01 .01</diffuseColor>
+    <specularColor>1 1 1</specularColor>
+    <exponent>38</exponent>
+  </shader>
+  <shader name="orange" type="Phong">
+    <diffuseColor>.4 .1 .0</diffuseColor>
+    <specularColor>0.3 0.7 0.0</specularColor>
+    <exponent>9</exponent>
+  </shader>
+  <shader name="bg" type="Phong">
+    <diffuseColor>.3 .7 .7</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>5</exponent>
+  </shader>
+  <surface type="Cone">
+    <shader ref="orange" />
+    <center>0 0 -2</center>
+    <radius>0.4</radius>
+    <height>4</height>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="bg" />
+    <center>0 0 -8</center>    
+    <radius>5</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="bg" />
+    <center>0 -14 -8</center>    
+    <radius>9</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="black" />
+    <center>1.2 1 -3</center>    
+    <radius>0.6</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="black" />
+    <center>-1.2 1 -3</center>    
+    <radius>0.6</radius>
+  </surface>
+  <light>
+    <position>36 22 45</position>
+    <intensity>0.1 0 0.1</intensity>
+  </light>
+  <light>
+    <position>3.5 20 8</position>
+    <intensity>1 1 1</intensity>
+  </light>
+</scene>

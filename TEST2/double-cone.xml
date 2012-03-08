@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- A cone extending to both side of its tip. -->
+<scene>
+  <camera>
+    <viewPoint>18 6 6</viewPoint>
+    <viewDir>-3 -1 -2</viewDir>
+    <projNormal>3 1 2</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>3</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="blue" type="Phong">
+    <diffuseColor>.2 .3 .8</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>34</exponent>
+  </shader>
+  <surface type="Cone">
+    <shader ref="blue" />
+    <center>0 0 -3</center>
+    <tipz>-1</tipz>
+    <radius>1.8</radius>
+    <height>8</height>
+  </surface>
+  <light>
+    <position>10 6 -12</position>
+    <intensity>1 0.2 1</intensity>
+  </light>
+  <light>
+    <position>3.5 2 0</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  <light>
+    <position>20 30 20</position>
+    <intensity>.2 .2 .2</intensity>
+  </light>
+  <light>
+    <position>20 -30 20</position>
+    <intensity>.05 .05 .05</intensity>
+  </light>
+</scene>

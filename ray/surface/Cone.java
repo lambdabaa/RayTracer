@@ -45,9 +45,9 @@ public class Cone extends Surface {
 		Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
 		
-		double H = Math.abs(tipz - center.z) + height / 2;
-		double R = radius * H /Math.abs(tipz - center.z);
-		double s = R * R / H * H;
+		double H = tipz - center.z;
+		double R = - radius * H / (rayIn.direction.z - H);
+		double s = Math.pow(R, 2) / Math.pow(H,  2);
 			
 		double a = Math.pow(rayIn.direction.x, 2) + Math.pow(rayIn.direction.y, 2) - s * Math.pow(rayIn.direction.z, 2);
 		double b = 2 * (rayIn.direction.x * eminusc.x + rayIn.direction.y * eminusc.y - s * (rayIn.direction.z - H) * rayIn.direction.z);
@@ -58,58 +58,60 @@ public class Cone extends Surface {
 		}
 		
 		double t1 = Math.min(-b + Math.sqrt(discriminant) / (2 * a), -b - Math.sqrt(discriminant) / (2 * a));
-	    double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
-	    double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
+		double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
+	  double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
 	    
-	    // We'll iterate through the values in sorted order so we find closest intersection first
-	    double[] tarr = {t1, t2, t3};
-	    Arrays.sort(tarr);
-	    
-	    Double t = null;                 // The lowest intersection we find
-	    for (double x : tarr) {
-	      IntersectionRecord tmp = new IntersectionRecord();
-	      tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, x));
+	  // We'll iterate through the values in sorted order so we find closest intersection first
+	  double[] tarr = {t1, t2, t3};
+	  Arrays.sort(tarr);
+	  
+	  Double t = null;                 // The lowest intersection we find
+	  for (double x : tarr) {
+	    IntersectionRecord tmp = new IntersectionRecord();
+	    tmp.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, x));
 	      
-	      if (x == t1) {
-	        if (Math.abs(tmp.location.z - center.z) < height / 2.0) {
-	        	Vector3 radialUnit = new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, 0);
-	        	radialUnit.normalize();
-	          outRecord.normal.set(
-	              new Vector3(
-	                  radialUnit.x, radialUnit.y, R/H));
-	          outRecord.normal.normalize();
-	          t = x;
-	          break;
-	        }
-	      } else {
-	        if ( x == t3 && Math.pow(tmp.location.x - center.x, 2)
-	            + Math.pow(tmp.location.y - center.y, 2) 
-	            - Math.pow(R, 2) <= 0) {
-	            outRecord.normal.set(0, 0, -1);
-		        t = x;
-	          } else if (x == t2 && Math.pow(tmp.location.x - center.x, 2)
-	  	            + Math.pow(tmp.location.y - center.y, 2) 
-		            - Math.pow(R / H * (H-height), 2) <= 0) {
-	            outRecord.normal.set(0, 0, 1);
-		        t = x;
-	          }
-	          break;
+	    if (x == t1) {
+	      if (Math.abs(tmp.location.z - center.z) < height) {
+	        Vector3 radialUnit = new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, 0);
+	        radialUnit.normalize();
+	        outRecord.normal.set(
+	            new Vector3(
+	                radialUnit.x, 
+	                radialUnit.y,
+	                R / H));
+	        outRecord.normal.normalize();
+	        t = x;
+	        break;
+	      }
+	    } else if (x == t2) {
+	      if (Math.pow(tmp.location.x - center.x, 2) + Math.pow(tmp.location.y - center.y, 2) - Math.pow(R / H, 2) <= 0) {
+	        outRecord.normal.set(0, 0, 1);
+	        t = x;
+	        break;
+	      }
+	    } else if (x == t3) {
+	      if (Math.pow(tmp.location.x - center.x, 2) + Math.pow(tmp.location.y - center.y, 2) - Math.pow(R, 2) <= 0) {
+	        outRecord.normal.set(0, 0, -1);
+	        t = x;
+	        break;
 	      }
 	    }
-	    if (t == null || t > rayIn.end || t < rayIn.start) {
-	        return false;
-	      }
+	  }
+	  
+	  if (t == null || t > rayIn.end || t < rayIn.start) {
+	    return false;
+	  }
 	  		
-	      outRecord.surface = this;
-	  		outRecord.t = t;
-	  		outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t));
-	  		return true;
+	  outRecord.surface = this;
+	  outRecord.t = t;
+	  outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t));
+	  return true;
 	}
 	
 	/**
 	 * @see Object#toString()
 	 */
 	public String toString() {
-        return "Cone " + center + " "+ radius + " "+ height + " "+ tipz + " "+ shader + " end";
+    return "Cone " + center + " "+ radius + " "+ height + " "+ tipz + " "+ shader + " end";
 	}
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A cone casting a shadow onto a sphere. -->
+<scene>
+  <camera>
+    <viewPoint>10 6 -4</viewPoint>
+    <viewDir>-3 -2 2</viewDir>
+    <projNormal>3 2 -2</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>4</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="green" type="Phong">
+    <diffuseColor>.2 .9 .1</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>25</exponent>
+  </shader>
+  <shader name="bg" type="Phong">
+    <diffuseColor>.3 .7 .7</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>5</exponent>
+  </shader>
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>-1 -1 1</center>    
+    <radius>0.6</radius>
+    <height>2</height>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="bg" />
+    <center>-1 2 8</center>    
+    <radius>6</radius>
+  </surface>
+  <light>
+    <position>6 3 -7</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  <light>
+    <position>3 3 -4</position>
+    <intensity>1 0.1 0.3</intensity>
+  </light>
+  <light>
+    <position>7 4 -3</position>
+    <intensity>0.2 0.2 0.2</intensity>
+  </light>
+</scene>

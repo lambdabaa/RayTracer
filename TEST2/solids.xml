@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A collection of solid objects. -->
+<scene>
+  <camera>
+    <viewPoint>10 6 -4</viewPoint>
+    <viewDir>-3 -2 2</viewDir>
+    <projNormal>3 2 -2</projNormal>
+    <viewUp>0 0 -1</viewUp>
+    <projDistance>3.5</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="green" type="Phong">
+    <diffuseColor>.1 .9 .2</diffuseColor>
+    <specularColor>.4 .8 .8</specularColor>
+    <exponent>30</exponent>
+  </shader>
+  <shader name="bg" type="Phong">
+    <diffuseColor>.3 .7 .7</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>5</exponent>
+  </shader>
+  <shader name="purple" type="Phong">
+    <diffuseColor>.6 .1 .7</diffuseColor>
+    <specularColor>1 1 0.5</specularColor>
+    <exponent>5</exponent>
+  </shader>
+  <shader name="red" type="Phong">
+    <diffuseColor>1 .0 .0</diffuseColor>
+    <specularColor>1 1 0.5</specularColor>
+    <exponent>5</exponent>
+  </shader>
+  <shader name="orange" type="Phong">
+    <diffuseColor>.4 .1 .0</diffuseColor>
+    <specularColor>0.3 0.7 0.0</specularColor>
+    <exponent>9</exponent>
+  </shader>
+  <shader name="blue" type="Lambertian">
+    <diffuseColor>.2 .3 1</diffuseColor>
+  </shader>
+  <shader name="gray" type="Lambertian">
+    <diffuseColor>.5 .5 .5</diffuseColor>
+  </shader>
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>-1 2 0.5</center>
+    <tipz>-1</tipz>
+    <radius>0.6</radius>
+    <height>3</height>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="bg" />
+    <center>1 0 1</center>    
+    <radius>1</radius>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="purple" />
+    <center>3 -1 1</center>    
+    <radius>1</radius>
+    <height>2</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blue" />
+    <minPt>2 2 1</minPt>
+    <maxPt>3 3 2</maxPt>
+  </surface>
+  <surface type="Box">
+    <shader ref="gray" />
+    <minPt>-5 -6 3 </minPt>
+    <maxPt>5 6 3.1 </maxPt>
+  </surface>
+  <surface type="Cone">
+    <shader ref="orange" />
+    <center>4 1.8 2.2</center>
+    <tipz>1.4</tipz>    
+    <radius>0.7</radius>
+    <height>0.8</height>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="red" />
+    <center>3 1 -2</center>    
+    <radius> 1.2 </radius>
+    <height>0.1</height>
+  </surface>
+  <light>
+    <position>6 3 -7</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  <light>
+    <position>3 3 -4</position>
+    <intensity>1 0.1 0.3</intensity>
+  </light>
+  <light>
+    <position>7 4 -3</position>
+    <intensity>0.2 0.2 0.2</intensity>
+  </light>
+</scene>

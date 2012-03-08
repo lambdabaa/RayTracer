@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A flat red cone over a box.  Note: viewpoint is in (extended) cone volume. -->
+<scene>
+  <camera>
+    <viewPoint>5 4 20</viewPoint>
+    <viewDir>-5 -4 -20</viewDir>
+    <projNormal>5 4 20</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>3.5</projDistance>
+    <viewWidth>1.5</viewWidth>
+    <viewHeight>1.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="red" type="Phong">
+    <diffuseColor>1 .2 .1</diffuseColor>
+    <specularColor>0 1 1</specularColor>
+    <exponent>25</exponent>
+  </shader>
+  <shader name="gray" type="Lambertian">
+    <diffuseColor>.5 .5 .5</diffuseColor>
+  </shader>
+  <surface type="Cone">
+    <shader ref="red" />
+    <center>0 0 -0.3</center>    
+    <radius>1.8</radius>
+    <height>0.25</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="gray" />
+    <minPt>-4 -4 -3 </minPt>
+    <maxPt>3 3 -1.5 </maxPt>
+  </surface>
+  <light>
+    <position>6 3 7</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  <light>
+    <position>3 3 4</position>
+    <intensity>1 0.5 0.3</intensity>
+  </light>
+</scene>

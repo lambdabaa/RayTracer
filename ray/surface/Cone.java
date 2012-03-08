@@ -44,7 +44,7 @@ public class Cone extends Surface {
 		Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
 		
-		double H = Math.abs(tipz - center.z);
+		double H = tipz - center.z;
 		double R = radius;
 		double s = Math.pow(R, 2) / Math.pow(H,  2);
 			
@@ -56,10 +56,10 @@ public class Cone extends Surface {
 			return false;
 		}
 		
-    double t1a = (-b + Math.sqrt(discriminant)) / (2 * a);
-    double t1b = (-b - Math.sqrt(discriminant)) / (2 * a);
+		double t1a = (-b + Math.sqrt(discriminant)) / (2 * a);
+		double t1b = (-b - Math.sqrt(discriminant)) / (2 * a);
 		double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
-	  double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
+		double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
 	    
 	  // We'll iterate through the values in sorted order so we find closest intersection first
 	  double[] tarr = {t1a, t1b, t2, t3};

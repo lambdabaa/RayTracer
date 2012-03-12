@@ -54,10 +54,11 @@ public class Phong extends Shader {
 				h.add(l,toEye);
 				h.normalize();
 				
-				double x = Math.max(0, record.normal.dot(l)) + specularColor.r * light.intensity.r * Math.pow(Math.max(0, record.normal.dot(h)), exponent);
-				outColor.r += diffuseColor.r * light.intensity.r * x;
-				outColor.g += diffuseColor.g * light.intensity.g * x;
-				outColor.b += diffuseColor.b * light.intensity.b * x;
+				double x = Math.max(0, record.normal.dot(l));
+				double y = Math.pow(Math.max(0, record.normal.dot(h)), exponent);
+				outColor.r += light.intensity.r * (diffuseColor.r * x + specularColor.r * y);
+				outColor.g += light.intensity.g * (diffuseColor.g * x + specularColor.g * y);
+				outColor.b += light.intensity.b * (diffuseColor.b * x + specularColor.b * y);
 			}
 		}
 		

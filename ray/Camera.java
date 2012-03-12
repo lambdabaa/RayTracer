@@ -78,7 +78,7 @@ public class Camera {
 		outRay.start = 0;
 		outRay.end = Double.POSITIVE_INFINITY;
 		outRay.direction.set(Vector3.getScaledVector(basisW, -projDistance));
-		outRay.direction.add(Vector3.getScaledVector(basisU, inU * viewWidth - viewWidth / 2));
-		outRay.direction.add(Vector3.getScaledVector(basisV, inV * viewHeight - viewHeight / 2));
+		outRay.direction.add(Vector3.getScaledVector(basisU, inU * viewWidth - viewWidth * 0.5));
+		outRay.direction.add(Vector3.getScaledVector(basisV, inV * viewHeight - viewHeight * 0.5));
 	}
 }

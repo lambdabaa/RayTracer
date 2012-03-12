@@ -13,6 +13,7 @@ import ray.math.Vector3;
  * @author ags, modified by DS 2/2012
  */
 public class RayTracer {
+  private static final float NUMBER_OF_PROGRESS_DOTS = 20;
 
 	public static String testFolderPath;
 	
@@ -57,10 +58,8 @@ public class RayTracer {
 	 * @param args
 	 */
 	public static final void main(String[] args) {
-
 		Parser parser = new Parser();
 		for (int ctr = 0; ctr < args.length; ctr++) {
-
 			ArrayList<String> fileLists = getFileLists(args[ctr]);
 			
 			for (String inputFilename : fileLists) {
@@ -85,7 +84,6 @@ public class RayTracer {
 	 * @param scene The scene to be rendered
 	 */
 	public static void renderImage(Scene scene) {
-
 		// Get the output image
 		Image image = scene.getImage();
 		Camera cam = scene.getCamera();
@@ -100,6 +98,7 @@ public class RayTracer {
 		Ray ray = new Ray();
 		Color pixelColor = new Color(255, 255, 255);
 		Color rayColor = new Color();
+		ArrayList<Light> lights = scene.getLights();
 
 		int total = height * width;
 		int counter = 0;
@@ -108,18 +107,17 @@ public class RayTracer {
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
 				cam.getRay(ray, (x + 0.5) / width, (y + 0.5) / height);
-				shadeRay(rayColor, scene, ray, scene.getLights(), 1, 1, false);
+				shadeRay(rayColor, scene, ray, lights, 1, 1, false);
 				pixelColor.set(rayColor);
 				
-				//Gamma correct and clamp pixel values
+				// Gamma correct and clamp pixel values
 				pixelColor.gammaCorrect(2.2);
 				pixelColor.clamp(0, 1);
 				image.setPixelColor(pixelColor, x, y);
 				
 				counter++;
-				float numberOfProgressDots = 20;
-				if((int)(numberOfProgressDots * counter / total) != lastShownProgress) {
-					lastShownProgress = (int)(numberOfProgressDots * counter / total);
+				if ((int) (NUMBER_OF_PROGRESS_DOTS * counter / total) != lastShownProgress) {
+					lastShownProgress = (int) (NUMBER_OF_PROGRESS_DOTS * counter / total);
 					System.out.print(".");
 				}
 			}

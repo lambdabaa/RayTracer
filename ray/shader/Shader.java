@@ -39,7 +39,6 @@ public abstract class Shader {
 	 * Utility method to compute shadows.
 	 */
 	protected boolean isShadowed(Scene scene, Light light, IntersectionRecord record) {
-		// TODO (soon): fill in this function
 		Vector3 shadowDirection = new Vector3();
 		shadowDirection.sub(light.position, record.location);
 		double distance = shadowDirection.length();

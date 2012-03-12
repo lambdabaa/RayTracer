@@ -29,19 +29,22 @@ public class Box extends Surface {
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
 		double txMin, txMax, tyMin, tyMax, tzMin, tzMax;
 		
-		double tx1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
-		double tx2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
-		txMin = Math.min(tx1,tx2);
-		txMax = Math.max(tx1,tx2);
+		double invx = 1 / rayIn.direction.x;
+		double tx1 = (minPt.x - rayIn.origin.x) * invx;
+		double tx2 = (maxPt.x - rayIn.origin.x) * invx;
+		txMin = Math.min(tx1, tx2);
+		txMax = Math.max(tx1, tx2);
 		
-		double ty1 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
-		double ty2 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
-		tyMin = Math.min(ty1,ty2);
-		tyMax = Math.max(ty1,ty2);
+		double invy = 1 / rayIn.direction.y;
+		double ty1 = (minPt.y - rayIn.origin.y) * invy;
+		double ty2 = (maxPt.y - rayIn.origin.y) * invy;
+		tyMin = Math.min(ty1, ty2);
+		tyMax = Math.max(ty1, ty2);
 		
-		double tz1 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
-		double tz2 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
-		tzMin = Math.min(tz1,tz2);
+		double invz = 1 / rayIn.direction.z;
+		double tz1 = (minPt.z - rayIn.origin.z) * invz;
+		double tz2 = (maxPt.z - rayIn.origin.z) * invz;
+		tzMin = Math.min(tz1, tz2);
 		tzMax = Math.max(tz1,tz2);
 		
 		double mint = Math.max(txMin, Math.max(tyMin, tzMin));
@@ -79,4 +82,3 @@ public class Box extends Surface {
 	}
 
 }
-

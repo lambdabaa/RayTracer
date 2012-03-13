@@ -2,6 +2,7 @@ package ray.surface;
 
 import ray.IntersectionRecord;
 import ray.Ray;
+import ray.RayTracer;
 import ray.math.Point3;
 import ray.math.Vector3;
 
@@ -57,18 +58,18 @@ public class Box extends Surface {
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);
 		outRecord.location.add(rayIn.origin, scaledDirection);
-		if (Math.abs(outRecord.location.x - maxPt.x) <= EPSILON) { 
-			outRecord.normal.set(new Vector3(1, 0, 0));
+		if (Math.abs(outRecord.location.x - maxPt.x) <= EPSILON) {
+			outRecord.normal.set(1, 0, 0);
 		} else if (Math.abs(outRecord.location.x - minPt.x) <= EPSILON) {
-			outRecord.normal.set(new Vector3(-1, 0, 0));
+			outRecord.normal.set(-1, 0, 0);
 		} else if (Math.abs(outRecord.location.y - maxPt.y) <= EPSILON) {
-			outRecord.normal.set(new Vector3(0, 1, 0));
+			outRecord.normal.set(0, 1, 0);
 		} else if (Math.abs(outRecord.location.y - minPt.y) <= EPSILON) { 
-			outRecord.normal.set(new Vector3(0, -1, 0));
+			outRecord.normal.set(0, -1, 0);
 		} else if (Math.abs(outRecord.location.z - maxPt.z) <= EPSILON) {
-			outRecord.normal.set(new Vector3(0, 0, 1));
+			outRecord.normal.set(0, 0, 1);
 		} else if (Math.abs(outRecord.location.z - minPt.z) <= EPSILON) {
-			outRecord.normal.set(new Vector3(0, 0, -1));
+			outRecord.normal.set(0, 0, -1);
 		}
 		
 		return true;

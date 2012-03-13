@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import ray.IntersectionRecord;
 import ray.Ray;
+import ray.RayTracer;
 import ray.math.Point3;
 //import ray.math.Vector3;
 import ray.math.Vector3;
@@ -41,7 +42,7 @@ public class Cone extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		Vector3 eminusc = new Vector3();
+		Vector3 eminusc = RayTracer.v3factory.get();
 		eminusc.sub(rayIn.origin, center);
 		
 		double H = tipz - center.z;
@@ -60,6 +61,9 @@ public class Cone extends Surface {
 		double t1b = (-b - Math.sqrt(discriminant)) / (2 * a);
 		double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
 		double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
+		
+		RayTracer.v3factory.recycle(eminusc);
+		eminusc = null;
 	    
 	  // We'll iterate through the values in sorted order so we find closest intersection first
 	  double[] tarr = {t1a, t1b, t2, t3};
@@ -72,9 +76,9 @@ public class Cone extends Surface {
 	    
 	    if (x == t1a || x == t1b) {
 	      if (Math.abs(tmp.location.z - center.z) < height / 2) {
-	        outRecord.normal.set(new Vector3(tmp.location.x - center.x, tmp.location.y - center.y, 0));
+	        outRecord.normal.set(tmp.location.x - center.x, tmp.location.y - center.y, 0);
 	        outRecord.normal.normalize();
-	        outRecord.normal.add(new Vector3(0, 0, R / H));
+	        outRecord.normal.add(0, 0, R / H);
 	        outRecord.normal.normalize();
 	        t = x;
 	        break;

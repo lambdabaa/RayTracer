@@ -2,10 +2,14 @@ package ray;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import ray.light.Light;
 import ray.math.Color;
+import ray.math.Factory;
 import ray.math.Vector3;
+import ray.math.Vector3Factory;
 
 /**
  * A simple ray tracer.
@@ -16,6 +20,7 @@ public class RayTracer {
   private static final float NUMBER_OF_PROGRESS_DOTS = 20;
 
 	public static String testFolderPath;
+	public static Factory<Vector3> v3factory;
 	
 	public static String getTestFolderPath() { return testFolderPath; }
 	/**
@@ -84,6 +89,9 @@ public class RayTracer {
 	 * @param scene The scene to be rendered
 	 */
 	public static void renderImage(Scene scene) {
+	  List<Vector3> v3list = new LinkedList<Vector3>();
+	  v3factory = new Factory<Vector3>(new Vector3Factory(), v3list);
+	  
 		// Get the output image
 		Image image = scene.getImage();
 		Camera cam = scene.getCamera();
@@ -143,7 +151,7 @@ public class RayTracer {
 		outColor.set(0, 0, 0);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
-		Vector3 toEye = new Vector3();
+		Vector3 toEye = v3factory.get();
 		if (!scene.intersect(eyeRecord, ray, false)) {
 			return;
 		}

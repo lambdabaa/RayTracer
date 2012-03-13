@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import ray.IntersectionRecord;
 import ray.Ray;
+import ray.RayTracer;
 import ray.math.Point3;
 import ray.math.Vector3;
 
@@ -35,7 +36,7 @@ public class Cylinder extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		Vector3 eminusc = new Vector3();
+	  Vector3 eminusc = RayTracer.v3factory.get();
 		eminusc.sub(rayIn.origin, center);
 		
 		double a = Math.pow(rayIn.direction.x, 2) + Math.pow(rayIn.direction.y, 2);
@@ -50,6 +51,9 @@ public class Cylinder extends Surface {
     double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
     double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
     
+    RayTracer.v3factory.recycle(eminusc);
+    eminusc = null;
+    
     // We'll iterate through the values in sorted order so we find closest intersection first
     double[] tarr = {t1, t2, t3};
     Arrays.sort(tarr);
@@ -62,10 +66,9 @@ public class Cylinder extends Surface {
       if (x == t1) {
         if (Math.abs(tmp.location.z - center.z) < height / 2.0) {
           outRecord.normal.set(
-              new Vector3(
-                  tmp.location.x - center.x, 
-                  tmp.location.y - center.y,
-                  0));
+              tmp.location.x - center.x, 
+              tmp.location.y - center.y,
+              0);
           outRecord.normal.normalize();
           t = x;
           break;

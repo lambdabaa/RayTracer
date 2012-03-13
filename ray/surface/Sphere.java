@@ -2,6 +2,7 @@ package ray.surface;
 
 import ray.IntersectionRecord;
 import ray.Ray;
+import ray.RayTracer;
 import ray.math.Point3;
 import ray.math.Vector3;
 
@@ -33,7 +34,7 @@ public class Sphere extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		Vector3 eminusc = new Vector3();
+	  Vector3 eminusc = RayTracer.v3factory.get();
 		eminusc.sub(rayIn.origin, center);
 		
 		double a = rayIn.direction.dot(rayIn.direction);
@@ -43,6 +44,9 @@ public class Sphere extends Surface {
 		if (discriminant < 0) {
 			return false;
 		}
+		
+		RayTracer.v3factory.recycle(eminusc);
+		eminusc = null;
 		
 		double t = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);
 		if (t > rayIn.end || t < rayIn.start) {

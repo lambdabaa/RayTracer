@@ -178,7 +178,7 @@ public class Vector3 extends Tuple3 {
   }
   
   public static Vector3 getScaledVector(Vector3 unitVector, double scale) {
-    Vector3 vector = RayTracer.v3factory.get();
+    Vector3 vector = new Vector3();
     vector.set(unitVector);
     vector.scale(scale);
     return vector;

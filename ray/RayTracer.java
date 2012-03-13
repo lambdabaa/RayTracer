@@ -2,14 +2,10 @@ package ray;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 import ray.light.Light;
 import ray.math.Color;
-import ray.math.Factory;
 import ray.math.Vector3;
-import ray.math.Vector3Factory;
 
 /**
  * A simple ray tracer.
@@ -17,11 +13,7 @@ import ray.math.Vector3Factory;
  * @author ags, modified by DS 2/2012
  */
 public class RayTracer {
-  private static final float NUMBER_OF_PROGRESS_DOTS = 20;
-
 	public static String testFolderPath;
-	
-	public static Factory<Vector3> v3factory = new Factory<Vector3>(new Vector3Factory(), new LinkedList());
 	
 	public static String getTestFolderPath() { return testFolderPath; }
 	/**
@@ -109,10 +101,12 @@ public class RayTracer {
 		int total = height * width;
 		int counter = 0;
 		int lastShownProgress = 0;
+		double invHeight = 1.0 / height;
+		double invWidth = 1.0 / width;
 				
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
-				cam.getRay(ray, (x + 0.5) / width, (y + 0.5) / height);
+				cam.getRay(ray, (x + 0.5) * invWidth, (y + 0.5) * invHeight);
 				shadeRay(rayColor, scene, ray, lights, 1, 1, false);
 				pixelColor.set(rayColor);
 				
@@ -122,8 +116,9 @@ public class RayTracer {
 				image.setPixelColor(pixelColor, x, y);
 				
 				counter++;
-				if ((int) (NUMBER_OF_PROGRESS_DOTS * counter / total) != lastShownProgress) {
-					lastShownProgress = (int) (NUMBER_OF_PROGRESS_DOTS * counter / total);
+				int progress = 20 * counter / total;
+				if (progress != lastShownProgress) {
+					lastShownProgress = progress;
 					System.out.print(".");
 				}
 			}
@@ -149,7 +144,7 @@ public class RayTracer {
 		outColor.set(0, 0, 0);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
-		Vector3 toEye = v3factory.get();
+		Vector3 toEye = new Vector3();
 		if (!scene.intersect(eyeRecord, ray, false)) {
 			return;
 		}

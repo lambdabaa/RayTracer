@@ -41,10 +41,10 @@ public class Camera {
 	 * basisU, basisV, and basisW form an orthonormal basis.
 	 * basisW points in same direction as projNormal.
 	 */
-	protected final Vector3 basisU = RayTracer.v3factory.get();
-	protected final Vector3 basisV = RayTracer.v3factory.get();
-	protected final Vector3 basisW = RayTracer.v3factory.get();
-	protected final Vector3 centerDir = RayTracer.v3factory.get();
+	protected final Vector3 basisU = new Vector3();
+	protected final Vector3 basisV = new Vector3();
+	protected final Vector3 basisW = new Vector3();
+	protected final Vector3 centerDir = new Vector3();
 	
 	// Has the view been initialized?
 	protected boolean initialized = false;

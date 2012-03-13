@@ -35,7 +35,7 @@ public class Lambertian extends Shader {
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
 			IntersectionRecord record) {
 		outColor.set(0, 0, 0);
-		Vector3 l = RayTracer.v3factory.get();
+		Vector3 l = new Vector3();
 		
 		for (Light light : lights) {
 		  
@@ -50,7 +50,6 @@ public class Lambertian extends Shader {
 			}
 		}
 		
-		RayTracer.v3factory.recycle(l);
 		outColor.clamp(0, 1);
 	}
 	

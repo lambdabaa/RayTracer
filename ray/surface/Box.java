@@ -2,7 +2,6 @@ package ray.surface;
 
 import ray.IntersectionRecord;
 import ray.Ray;
-import ray.RayTracer;
 import ray.math.Point3;
 import ray.math.Vector3;
 

@@ -34,7 +34,7 @@ public class Sphere extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-	  Vector3 eminusc = RayTracer.v3factory.get();
+	  Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
 		
 		double a = rayIn.direction.dot(rayIn.direction);
@@ -45,7 +45,6 @@ public class Sphere extends Surface {
 			return false;
 		}
 		
-		RayTracer.v3factory.recycle(eminusc);
 		eminusc = null;
 		
 		double t = (discriminant == 0 ? -b : -b - Math.sqrt(discriminant)) / (2 * a);

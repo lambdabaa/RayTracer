@@ -4,9 +4,7 @@ import java.util.Arrays;
 
 import ray.IntersectionRecord;
 import ray.Ray;
-import ray.RayTracer;
 import ray.math.Point3;
-//import ray.math.Vector3;
 import ray.math.Vector3;
 
 public class Cone extends Surface {
@@ -42,7 +40,7 @@ public class Cone extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		Vector3 eminusc = RayTracer.v3factory.get();
+		Vector3 eminusc = new Vector3();
 		eminusc.sub(rayIn.origin, center);
 		
 		double H = tipz - center.z;
@@ -62,7 +60,6 @@ public class Cone extends Surface {
 		double t2 = (height / 2.0 - eminusc.z) / rayIn.direction.z;
 		double t3 = (-height / 2.0 - eminusc.z) / rayIn.direction.z;
 		
-		RayTracer.v3factory.recycle(eminusc);
 		eminusc = null;
 	    
 	  // We'll iterate through the values in sorted order so we find closest intersection first

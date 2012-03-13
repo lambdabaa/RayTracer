@@ -20,7 +20,8 @@ public class RayTracer {
   private static final float NUMBER_OF_PROGRESS_DOTS = 20;
 
 	public static String testFolderPath;
-	public static Factory<Vector3> v3factory;
+	
+	public static Factory<Vector3> v3factory = new Factory<Vector3>(new Vector3Factory(), new LinkedList());
 	
 	public static String getTestFolderPath() { return testFolderPath; }
 	/**
@@ -89,9 +90,6 @@ public class RayTracer {
 	 * @param scene The scene to be rendered
 	 */
 	public static void renderImage(Scene scene) {
-	  List<Vector3> v3list = new LinkedList<Vector3>();
-	  v3factory = new Factory<Vector3>(new Vector3Factory(), v3list);
-	  
 		// Get the output image
 		Image image = scene.getImage();
 		Camera cam = scene.getCamera();

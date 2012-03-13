@@ -1,6 +1,5 @@
 package ray;
 
-import ray.math.Factory;
 import ray.math.Point3;
 import ray.math.Vector3;
 

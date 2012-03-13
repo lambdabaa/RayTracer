@@ -1,5 +1,7 @@
 package ray.math;
 
+import ray.RayTracer;
+
 /**********************************************************************************
  * GENERAL CONTRACT FOR ALL MATH CLASSES.
  *
@@ -176,10 +178,16 @@ public class Vector3 extends Tuple3 {
   }
   
   public static Vector3 getScaledVector(Vector3 unitVector, double scale) {
-	Vector3 vector = new Vector3();
-	vector.set(unitVector);
-	vector.scale(scale);
-	return vector;
+    Vector3 vector = RayTracer.v3factory.get();
+    vector.set(unitVector);
+    vector.scale(scale);
+    return vector;
+  }
+
+  public void add(double x, double y, double z) {
+    this.x += x;
+    this.y += y;
+    this.z += z;
   }
 
 }

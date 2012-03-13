@@ -3,6 +3,7 @@ package ray.shader;
 import java.util.ArrayList;
 
 import ray.IntersectionRecord;
+import ray.RayTracer;
 import ray.Scene;
 import ray.light.Light;
 import ray.math.Color;
@@ -42,7 +43,7 @@ public class Phong extends Shader {
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
 			IntersectionRecord record) {
 		outColor.set(0, 0, 0);
-		Vector3 l = new Vector3();
+		Vector3 l = RayTracer.v3factory.get();
 		
 		for (Light light : lights) {
 			if (!isShadowed(scene, light, record)) {
@@ -50,7 +51,7 @@ public class Phong extends Shader {
 				l.normalize();
 				toEye.normalize();
 				
-				Vector3 h = new Vector3();
+				Vector3 h = RayTracer.v3factory.get();
 				h.add(l,toEye);
 				h.normalize();
 				
@@ -59,9 +60,11 @@ public class Phong extends Shader {
 				outColor.r += light.intensity.r * (diffuseColor.r * x + specularColor.r * y);
 				outColor.g += light.intensity.g * (diffuseColor.g * x + specularColor.g * y);
 				outColor.b += light.intensity.b * (diffuseColor.b * x + specularColor.b * y);
+				RayTracer.v3factory.recycle(h);
 			}
 		}
 		
+		RayTracer.v3factory.recycle(l);
 		outColor.clamp(0, 1);
 	}
 	

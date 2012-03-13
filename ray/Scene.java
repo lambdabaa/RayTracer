@@ -1,7 +1,6 @@
 package ray;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import ray.light.Light;
 import ray.shader.Shader;

@@ -1,0 +1,2854 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scene>
+  <image>800 600</image>
+
+  <camera>
+    <viewPoint>10 4.8 4</viewPoint>
+    <viewDir>-5 -2.4 -2</viewDir>
+    <projNormal>5 2.4 2</projNormal>
+    <viewUp>0 0 1</viewUp>
+    <projDistance>4.5</projDistance>
+    <viewWidth>8</viewWidth>
+    <viewHeight>6</viewHeight>
+  </camera>
+  <light>
+    <position>4 5 -3</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  <light>
+    <position>-5 -5 6</position>
+    <intensity>0.7 0.7 0.3</intensity>
+  </light>
+  <light>
+    <position>-5 -5 6.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>-4 -4 6.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>-3 -3 7.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>-2 -2 7.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>-1 -1 8.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>0 0 8.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>1 1 9.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>2 2 9.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>3 3 10.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>4 4 10.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>5 5 11.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>6 6 11.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>7 7 12.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>8 8 12.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>9 9 13.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>10 10 13.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>11 11 14.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>12 12 14.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>13 13 15.0</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <light>
+    <position>14 14 15.5</position>
+    <intensity>0.1 0.1 0.05</intensity>
+  </light>
+  <shader name="blue" type="Phong">
+    <diffuseColor>.2 .3 .8</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>10</exponent>
+  </shader>
+  <shader name="black" type="Phong">
+    <diffuseColor>.1 .1 .1</diffuseColor>
+    <specularColor>1 1 1</specularColor>
+    <exponent>20</exponent>
+  </shader>
+  <shader name="blueL" type="Lambertian">
+    <diffuseColor>.2 .3 .8</diffuseColor>
+  </shader>
+  <shader name="cone" type="Lambertian">
+    <diffuseColor>1 1 .8</diffuseColor>
+  </shader>
+  <shader name="star" type="Phong">
+    <diffuseColor>.9 1 .9</diffuseColor>
+    <specularColor>1 1 0.5</specularColor>
+    <exponent>20</exponent>
+  </shader>
+  <shader name="icecream0" type="Lambertian">
+    <diffuseColor>1 1.0 1.0</diffuseColor>
+  </shader>
+  <shader name="icecream1" type="Lambertian">
+    <diffuseColor>1 0.95 0.95</diffuseColor>
+  </shader>
+  <shader name="icecream2" type="Lambertian">
+    <diffuseColor>1 0.9 0.9</diffuseColor>
+  </shader>
+  <shader name="icecream3" type="Lambertian">
+    <diffuseColor>1 0.85 0.85</diffuseColor>
+  </shader>
+  <shader name="icecream4" type="Lambertian">
+    <diffuseColor>1 0.8 0.8</diffuseColor>
+  </shader>
+  <shader name="icecream5" type="Lambertian">
+    <diffuseColor>1 0.75 0.75</diffuseColor>
+  </shader>
+  <shader name="icecream6" type="Lambertian">
+    <diffuseColor>1 0.7 0.7</diffuseColor>
+  </shader>
+  <shader name="icecream7" type="Lambertian">
+    <diffuseColor>1 0.65 0.65</diffuseColor>
+  </shader>
+  <shader name="icecream8" type="Lambertian">
+    <diffuseColor>1 0.6 0.6</diffuseColor>
+  </shader>
+  <shader name="icecream9" type="Lambertian">
+    <diffuseColor>1 0.55 0.55</diffuseColor>
+  </shader>
+  <shader name="icecream10" type="Lambertian">
+    <diffuseColor>1 0.5 0.5</diffuseColor>
+  </shader>
+  <shader name="icecream11" type="Lambertian">
+    <diffuseColor>1 0.44999999999999996 0.44999999999999996</diffuseColor>
+  </shader>
+  <shader name="icecream12" type="Lambertian">
+    <diffuseColor>1 0.4 0.4</diffuseColor>
+  </shader>
+  <shader name="icecream13" type="Lambertian">
+    <diffuseColor>1 0.35 0.35</diffuseColor>
+  </shader>
+  <shader name="icecream14" type="Lambertian">
+    <diffuseColor>1 0.30000000000000004 0.30000000000000004</diffuseColor>
+  </shader>
+  <shader name="icecream15" type="Lambertian">
+    <diffuseColor>1 0.25 0.25</diffuseColor>
+  </shader>
+  <shader name="icecream16" type="Lambertian">
+    <diffuseColor>1 0.19999999999999996 0.19999999999999996</diffuseColor>
+  </shader>
+  <shader name="icecream17" type="Lambertian">
+    <diffuseColor>1 0.15000000000000002 0.15000000000000002</diffuseColor>
+  </shader>
+  <shader name="icecream18" type="Lambertian">
+    <diffuseColor>1 0.09999999999999998 0.09999999999999998</diffuseColor>
+  </shader>
+  <shader name="icecream19" type="Lambertian">
+    <diffuseColor>1 0.050000000000000044 0.050000000000000044</diffuseColor>
+  </shader>
+  <shader name="icecream20" type="Lambertian">
+    <diffuseColor>1 0.0 0.0</diffuseColor>
+  </shader>
+  <surface type="Sphere">
+    <shader ref="blue" />
+    <center>0 0 2.5</center>
+    <radius>2.5</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="black" />
+    <center>2.45 0.6 2.5</center>
+    <radius>0.25</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="black" />
+    <center>2.45 -0.6 2.5</center>
+    <radius>0.25</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="cone" />
+    <center>2.45 0 1.9</center>
+    <radius>0.25</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>0 0 5</center>
+    <radius>1.25</radius>
+    <height>2.5</height>
+    <tipz>7.5</tipz>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.0 0.0 1.0</minPt>
+    <maxPt>0.0 0.0 1.0</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.0 0.0 1.05</center>
+    <radius>0.0</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.03959969986401782 0.005644800322394688 0.8</minPt>
+    <maxPt>-0.035599699864017814 0.00964480032239469 0.804</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.037599699864017816 0.007644800322394688 0.8540000000000001</center>
+    <radius>0.002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.07681362293202929 -0.02235323985591407 0.717157287525381</minPt>
+    <maxPt>0.08481362293202929 -0.014353239855914069 0.725157287525381</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.08081362293202929 -0.01835323985591407 0.775157287525381</center>
+    <radius>0.004</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.10933563142616123 0.04945421822901079 0.6535898384862245</minPt>
+    <maxPt>-0.09733563142616124 0.06145421822901079 0.6655898384862245</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.10333563142616123 0.05545421822901079 0.7155898384862246</center>
+    <radius>0.006</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.13501663339719874 -0.0858516668800696 0.6</minPt>
+    <maxPt>0.15101663339719873 -0.0698516668800696 0.616</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.14301663339719875 -0.07785166688006959 0.666</center>
+    <radius>0.008</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.15193758257176426 0.13005756803142338 0.5527864045000421</minPt>
+    <maxPt>-0.13193758257176427 0.15005756803142337 0.5727864045000421</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.14193758257176425 0.14005756803142339 0.6227864045000422</center>
+    <radius>0.01</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.15847600997857925 -0.18023693922520226 0.5101020514433644</minPt>
+    <maxPt>0.18247600997857924 -0.15623693922520226 0.5341020514433644</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.17047600997857926 -0.16823693922520225 0.5841020514433645</center>
+    <radius>0.012</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.153364192862796 0.23426357879009516 0.47084973778708183</minPt>
+    <maxPt>-0.12536419286279601 0.26226357879009515 0.49884973778708186</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.139364192862796 0.24826357879009517 0.5488497377870819</center>
+    <radius>0.014000000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.13573728234783905 -0.28978507584211965 0.434314575050762</minPt>
+    <maxPt>0.16773728234783905 -0.2577850758421196 0.466314575050762</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.15173728234783906 -0.27378507584211964 0.5163145750507621</center>
+    <radius>0.016</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.10516997114418103 0.3442953342256211 0.4</minPt>
+    <maxPt>-0.06916997114418102 0.38029533422562106 0.436</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.08716997114418103 0.3622953342256211 0.486</center>
+    <radius>0.018</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.06170057995503362 -0.39521264963714475 0.3675444679663241</minPt>
+    <maxPt>0.10170057995503362 -0.3552126496371448 0.4075444679663241</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.08170057995503362 -0.37521264963714474 0.4575444679663241</center>
+    <radius>0.02</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.0058417687781461706 0.43996121844719754 0.33667504192892006</minPt>
+    <maxPt>0.03815823122185383 0.4839612184471975 0.38067504192892004</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.01615823122185383 0.46196121844719756 0.43067504192892003</center>
+    <radius>0.022</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.06142257102115424 -0.47605384965269554 0.3071796769724491</minPt>
+    <maxPt>-0.01342257102115424 -0.42805384965269555 0.35517967697244907</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.03742257102115424 -0.4520538496526955 0.40517967697244905</center>
+    <radius>0.024</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.13865432482716739 0.5011736008677257 0.2788897449072021</minPt>
+    <maxPt>0.19065432482716738 0.5531736008677257 0.3308897449072021</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.16465432482716738 0.5271736008677257 0.38088974490720207</center>
+    <radius>0.026000000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.2239917763934731 -0.5132520668327566 0.25166852264521167</minPt>
+    <maxPt>-0.16799177639347307 -0.4572520668327566 0.30766852264521166</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.1959917763934731 -0.48525206683275657 0.35766852264521165</center>
+    <radius>0.028000000000000004</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.31519319329063783 0.5105421147204711 0.2254033307585166</minPt>
+    <maxPt>0.3751931932906378 0.570542114720471 0.2854033307585166</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.3451931932906378 0.5405421147204711 0.3354033307585166</center>
+    <radius>0.03</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.4096923772602878 -0.49168298324714677 0.19999999999999996</minPt>
+    <maxPt>-0.3456923772602878 -0.42768298324714676 0.26399999999999996</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.3776923772602878 -0.45968298324714674 0.31399999999999995</center>
+    <radius>0.032</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.5046648538333689 0.45575583957349847 0.17537887487646786</minPt>
+    <maxPt>0.572664853833369 0.5237558395734985 0.24337887487646787</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.5386648538333689 0.48975583957349844 0.29337887487646785</center>
+    <radius>0.034</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.5971030796614681 -0.4023281151731637 0.15147186257614298</minPt>
+    <maxPt>-0.5251030796614682 -0.3303281151731637 0.223471862576143</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.5611030796614681 -0.3663281151731637 0.273471862576143</center>
+    <radius>0.036</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.6838987884965873 0.33148521398834696 0.12822021129186534</minPt>
+    <maxPt>0.7598987884965872 0.407485213988347 0.20422021129186535</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.7218987884965873 0.36948521398834694 0.25422021129186534</center>
+    <radius>0.038</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.7619303843321251 -0.24384849688177335 0.10557280900008414</minPt>
+    <maxPt>-0.6819303843321252 -0.16384849688177333 0.18557280900008416</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.7219303843321251 -0.20384849688177334 0.23557280900008415</center>
+    <radius>0.04</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.8281531285293416 0.1405787882543578 0.08348486100883201</minPt>
+    <maxPt>0.9121531285293416 0.2245787882543578 0.167484861008832</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.8701531285293417 0.1825787882543578 0.21748486100883202</center>
+    <radius>0.041999999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.879689761250388 -0.02336501554109078 0.061916848035314054</minPt>
+    <maxPt>-0.791689761250388 0.06463498445890922 0.14991684803531405</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.835689761250388 0.020634984458909218 0.19991684803531407</center>
+    <radius>0.044</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.9139191493444899 -0.10560202868053226 0.040833695337456066</minPt>
+    <maxPt>1.00591914934449 -0.013602028680532258 0.13283369533745606</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.95991914934449 -0.05960202868053226 0.18283369533745608</center>
+    <radius>0.046</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.9285605647429271 0.2436704282515548 0.020204102886728803</minPt>
+    <maxPt>-0.8325605647429272 0.3396704282515548 0.1162041028867288</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.8805605647429271 0.2916704282515548 0.16620410288672882</center>
+    <radius>0.048</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.9217512697247493 -0.38778163540943045 0.0</minPt>
+    <maxPt>1.0217512697247493 -0.28778163540943047 0.1</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.9717512697247493 -0.33778163540943046 0.15000000000000002</center>
+    <radius>0.05</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.8921152169747874 0.5345375942270366 -0.01980390271855703</minPt>
+    <maxPt>-0.7881152169747874 0.6385375942270366 0.08419609728144298</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.8401152169747873 0.5865375942270367 0.134196097281443</center>
+    <radius>0.052000000000000005</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.8388208605833617 -0.6802790338164102 -0.039230484541326494</minPt>
+    <maxPt>0.9468208605833617 -0.5722790338164102 0.06876951545867352</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.8928208605833617 -0.6262790338164101 0.11876951545867352</center>
+    <radius>0.054000000000000006</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.7616263150578312 0.8211731584820765 -0.05830052442583633</minPt>
+    <maxPt>-0.6496263150578312 0.9331731584820765 0.053699475574163685</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.7056263150578311 0.8771731584820766 0.10369947557416369</center>
+    <radius>0.05600000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.6609103877477618 -0.953308690491754 -0.07703296142690075</minPt>
+    <maxPt>0.7769103877477618 -0.837308690491754 0.038967038573099244</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.7189103877477618 -0.895308690491754 0.08896703857309925</center>
+    <radius>0.057999999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.5376883393550042 1.0727959963206695 -0.09544511501033215</minPt>
+    <maxPt>-0.41768833935500416 1.1927959963206693 0.024554884989667847</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.47768833935500415 1.1327959963206695 0.07455488498966785</center>
+    <radius>0.06</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.39361158988443007 -1.1758698551747346 -0.11355287256600444</minPt>
+    <maxPt>0.51761158988443 -1.0518698551747345 0.010447127433995562</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.45561158988443007 -1.1138698551747346 0.060447127433995565</center>
+    <radius>0.062</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.23095097509258747 1.2589923141559616 -0.13137084989847603</minPt>
+    <maxPt>-0.10295097509258747 1.3869923141559615 -0.003370849898476025</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.16695097509258747 1.3229923141559616 0.04662915010152398</center>
+    <radius>0.064</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.05256356211894335 -1.318953021125987 -0.14891252930760568</minPt>
+    <maxPt>0.18456356211894337 -1.186953021125987 -0.016912529307605673</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.11856356211894335 -1.252953021125987 0.03308747069239433</center>
+    <radius>0.066</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.1381565570273858 1.3529644362474347 -0.1661903789690602</minPt>
+    <maxPt>0.27415655702738584 1.4889644362474348 -0.030190378969060183</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.2061565570273858 1.4209644362474347 0.01980962103093982</center>
+    <radius>0.068</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.337342668930682 -1.3587493969524786 -0.18321595661992318</minPt>
+    <maxPt>-0.197342668930682 -1.2187493969524787 -0.043215956619923196</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.267342668930682 -1.2887493969524786 0.006784043380076807</center>
+    <radius>0.06999999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.5407338207844973 1.3346186478016104 -0.19999999999999996</minPt>
+    <maxPt>0.6847338207844973 1.4786186478016103 -0.055999999999999966</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.6127338207844972 1.4066186478016105 -0.005999999999999964</center>
+    <radius>0.072</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.7437655923351701 -1.2795361439437003 -0.21655250605964382</minPt>
+    <maxPt>-0.5957655923351701 -1.1315361439437004 -0.06855250605964383</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.6697655923351702 -1.2055361439437002 -0.018552506059643828</center>
+    <radius>0.074</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.941671331089999 1.193170190795592 -0.2328828005937953</minPt>
+    <maxPt>1.093671331089999 1.345170190795592 -0.0808828005937953</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.017671331089999 1.2691701907955921 -0.030882800593795293</center>
+    <radius>0.076</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.129591626852739 -1.075928787859207 -0.24899959967967966</minPt>
+    <maxPt>-0.973591626852739 -0.919928787859207 -0.09299959967967966</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.051591626852739 -0.997928787859207 -0.04299959967967966</center>
+    <radius>0.078</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.3026895528424989 0.9289778947397029 -0.26491106406735176</minPt>
+    <maxPt>1.4626895528424988 1.0889778947397029 -0.10491106406735176</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.382689552842499 1.008977894739703 -0.05491106406735176</center>
+    <radius>0.08</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.4562690069746536 -0.7542417247309089 -0.2806248474865698</minPt>
+    <maxPt>-1.2922690069746536 -0.5902417247309089 -0.11662484748656982</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.3742690069746535 -0.6722417247309089 -0.06662484748656981</center>
+    <radius>0.08199999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.5858933537758877 0.5543845871319538 -0.29614813968157194</minPt>
+    <maxPt>1.7538933537758876 0.7223845871319539 -0.12814813968157196</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.6698933537758878 0.6383845871319538 -0.07814813968157196</center>
+    <radius>0.08399999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.6875014989569475 -0.33277423430616576 -0.3114877048604001</minPt>
+    <maxPt>-1.5155014989569475 -0.16077423430616578 -0.13948770486040013</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.6015014989569474 -0.24677423430616577 -0.08948770486040013</center>
+    <radius>0.086</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.7575185274943845 0.09342711337706251 -0.3266499161421599</minPt>
+    <maxPt>1.9335185274943845 0.2694271133770625 -0.1506499161421599</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.8455185274943846 0.18142711337706252 -0.10064991614215989</center>
+    <radius>0.088</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.7929581032541329 0.15906363498720258 -0.34164078649987384</minPt>
+    <maxPt>-1.612958103254133 0.3390636349872026 -0.16164078649987385</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.7029581032541328 0.24906363498720258 -0.11164078649987384</center>
+    <radius>0.09</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.7915139632111132 -0.4196161574815846 -0.3564659966250536</minPt>
+    <maxPt>1.9755139632111132 -0.2356161574815846 -0.17246599662505363</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.8835139632111133 -0.32761615748158457 -0.12246599662505363</center>
+    <radius>0.092</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.7516380400778175 0.6827621669017269 -0.37113092008020887</minPt>
+    <maxPt>-1.5636380400778176 0.8707621669017269 -0.18313092008020887</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.6576380400778175 0.7767621669017268 -0.13313092008020888</center>
+    <radius>0.094</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.6726030099820994 -0.9427614602850611 -0.38564064605510184</minPt>
+    <maxPt>1.8646030099820994 -0.7507614602850612 -0.19364064605510184</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.7686030099820995 -0.8467614602850612 -0.14364064605510185</center>
+    <radius>0.096</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.5545473815662976 1.1937262828912532 -0.3999999999999999</minPt>
+    <maxPt>-1.3585473815662976 1.389726282891253 -0.2039999999999999</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.4565473815662975 1.2917262828912532 -0.15399999999999991</center>
+    <radius>0.098</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.3985016129567502 -1.4297528592583293 -0.41421356237309515</minPt>
+    <maxPt>1.5985016129567502 -1.2297528592583293 -0.21421356237309513</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.4985016129567503 -1.3297528592583292 -0.16421356237309515</center>
+    <radius>0.1</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.2063941556544224 1.645057184781992 -0.42828568570856995</minPt>
+    <maxPt>-1.0023941556544225 1.8490571847819919 -0.22428568570856994</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.1043941556544223 1.747057184781992 -0.17428568570856995</center>
+    <radius>0.10200000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.9810367706075844 -1.8341120071347448 -0.4422205101855958</minPt>
+    <maxPt>1.1890367706075844 -1.6261120071347448 -0.2342205101855958</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.0850367706075845 -1.7301120071347447 -0.18422051018559582</center>
+    <radius>0.10400000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.726088931725723 1.9917818312318745 -0.45602197785610366</minPt>
+    <maxPt>-0.5140889317257229 2.2037818312318747 -0.24402197785610363</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.620088931725723 2.0977818312318743 -0.19402197785610364</center>
+    <radius>0.10600000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.4460016153696721 -2.1134527577137 -0.4696938456699069</minPt>
+    <maxPt>0.6620016153696722 -1.8974527577137 -0.2536938456699069</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.5540016153696721 -2.0054527577137 -0.2036938456699069</center>
+    <radius>0.10800000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.14594125993837223 2.1951540147897597 -0.48323969741913264</minPt>
+    <maxPt>0.0740587400616278 2.41515401478976 -0.2632396974191326</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.035941259938372216 2.3051540147897596 -0.21323969741913262</center>
+    <radius>0.11000000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.16830484361224776 -2.2336681668539438 -0.49666295470957667</minPt>
+    <maxPt>0.05569515638775227 -2.0096681668539436 -0.27266295470957663</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.056304843612247746 -2.1216681668539437 -0.22266295470957664</center>
+    <radius>0.11200000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.4904400127777451 2.2266271789113157 -0.5099668870541498</minPt>
+    <maxPt>0.718440012777745 2.4546271789113154 -0.28196688705414985</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.6044400127777452 2.3406271789113156 -0.23196688705414986</center>
+    <radius>0.11399999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.8137843426451831 -2.1725917802628145 -0.5231546211727816</minPt>
+    <maxPt>-0.5817843426451831 -1.9405917802628145 -0.29115462117278157</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.6977843426451831 -2.0565917802628144 -0.24115462117278158</center>
+    <radius>0.11599999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.1314130550699597 2.071111899153993 -0.5362291495737217</minPt>
+    <maxPt>1.3674130550699597 2.307111899153993 -0.3002291495737217</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.2494130550699598 2.189111899153993 -0.2502291495737217</center>
+    <radius>0.118</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.4363041657388593 -1.9227663257611929 -0.5491933384829668</minPt>
+    <maxPt>-1.1963041657388593 -1.682766325761193 -0.3091933384829668</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.3163041657388592 -1.8027663257611928 -0.25919333848296683</center>
+    <radius>0.12</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.7214923320778626 1.7291801961036686 -0.5620499351813308</minPt>
+    <maxPt>1.9654923320778626 1.9731801961036686 -0.31804993518133085</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.8434923320778625 1.8511801961036687 -0.26804993518133086</center>
+    <radius>0.122</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.9802255364795203 -1.4930193651371024 -0.5748015748023623</minPt>
+    <maxPt>-1.7322255364795203 -1.2450193651371024 -0.32680157480236227</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.8562255364795202 -1.3690193651371025 -0.2768015748023623</center>
+    <radius>0.124</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.2061211231383733 1.2179612432432658 -0.5874507866387544</minPt>
+    <maxPt>2.4581211231383735 1.4699612432432658 -0.3354507866387544</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.332121123138373 1.3439612432432657 -0.2854507866387544</center>
+    <radius>0.126</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.3933176471993223 -0.9086421955887265 -0.6000000000000001</minPt>
+    <maxPt>-2.137317647199322 -0.6526421955887265 -0.3440000000000001</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.265317647199322 -0.7806421955887265 -0.2940000000000001</center>
+    <radius>0.128</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.5366190145905554 0.5705821367845655 -0.61245154965971</minPt>
+    <maxPt>2.796619014590555 0.8305821367845655 -0.35245154965971004</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.6666190145905553 0.7005821367845655 -0.30245154965971005</center>
+    <radius>0.13</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.631627490719297 -0.2100874819937085 -0.6248076809271921</minPt>
+    <maxPt>-2.367627490719297 0.053912518006291515 -0.36080768092719206</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.499627490719297 -0.07808748199370849 -0.3108076809271921</center>
+    <radius>0.132</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.674862335248334 -0.16586587192617155 -0.6370705543744901</minPt>
+    <maxPt>2.942862335248334 0.10213412807382846 -0.3690705543744901</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.808862335248334 -0.031865871926171546 -0.3190705543744901</center>
+    <radius>0.134</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.663861075736291 0.5497673773307165 -0.6492422502470643</minPt>
+    <maxPt>-2.3918610757362906 0.8217673773307165 -0.37724225024706426</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.5278610757362907 0.6857673773307165 -0.32724225024706427</center>
+    <radius>0.136</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.597260760542622 -0.9337218760131725 -0.6613247725836149</minPt>
+    <maxPt>2.873260760542622 -0.6577218760131724 -0.3853247725836149</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.735260760542622 -0.7957218760131725 -0.3353247725836149</center>
+    <radius>0.13799999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.474856924910641 1.309611851359725 -0.6733200530681511</minPt>
+    <maxPt>-2.194856924910641 1.589611851359725 -0.39332005306815115</maxPt>
+  </surface>
+  <surface type="Cylinder">
+
+    <shader ref="blue" />
+    <center>-2.334856924910641 1.449611851359725 -0.34332005306815117</center>
+    <radius>0.13999999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.2976384558134613 -1.6692685602883472 -0.6852299546352716</minPt>
+    <maxPt>2.581638455813461 -1.3852685602883472 -0.4012299546352716</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.439638455813461 -1.5272685602883473 -0.3512299546352716</center>
+    <radius>0.142</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.067797041832775 2.004648446433345 -0.697056274847714</minPt>
+    <maxPt>-1.779797041832775 2.2926484464333448 -0.40905627484771406</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.9237970418327752 2.148648446433345 -0.3590562748477141</center>
+    <radius>0.144</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.7887104336417985 -2.30801104516009 -0.7088007490635062</minPt>
+    <maxPt>2.0807104336417983 -2.01601104516009 -0.4168007490635062</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.9347104336417984 -2.16201104516009 -0.36680074906350624</center>
+    <radius>0.146</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.464899307184631 2.572094481120394 -0.7204650534085253</minPt>
+    <maxPt>-1.168899307184631 2.868094481120394 -0.4244650534085253</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.316899307184631 2.720094481120394 -0.3744650534085253</center>
+    <radius>0.148</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.1019581031907355 -2.790284634013576 -0.7320508075688772</minPt>
+    <maxPt>1.4019581031907355 -2.4902846340135762 -0.4320508075688772</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.2519581031907354 -2.640284634013576 -0.3820508075688772</center>
+    <radius>0.15</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.7064608005347089 2.956774109956298 -0.7435595774162693</minPt>
+    <maxPt>-0.40246080053470895 3.260774109956298 -0.43955957741626933</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.5544608005347089 3.108774109956298 -0.38955957741626934</center>
+    <radius>0.152</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.2858431541993014 -3.066707304454958 -0.7549928774784245</minPt>
+    <maxPt>0.5938431541993014 -2.7587073044549584 -0.4469928774784245</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.4398431541993014 -2.9127073044549583 -0.3969928774784245</center>
+    <radius>0.154</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.15173652168158364 3.116308076552762 -0.7663521732655694</minPt>
+    <maxPt>0.46373652168158364 3.428308076552762 -0.45435217326556937</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.3077365216815836 3.272308076552762 -0.4043521732655694</center>
+    <radius>0.156</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.5975554316103683 -3.1029868685112008 -0.7776388834631178</minPt>
+    <maxPt>-0.2815554316103683 -2.786986868511201 -0.4616388834631178</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.43955543161036825 -2.944986868511201 -0.41163888346311783</center>
+    <radius>0.158</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.0425001777124738 3.0254244957475738 -0.7888543819998317</minPt>
+    <maxPt>1.362500177712474 3.3454244957475736 -0.4688543819998317</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.2025001777124738 3.185424495747574 -0.4188543819998317</center>
+    <radius>0.16</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.4772529739001206 -2.8836302902943802 -0.8</minPt>
+    <maxPt>-1.1532529739001205 -2.5596302902943804 -0.47600000000000003</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.3152529739001206 -2.7216302902943803 -0.42600000000000005</center>
+    <radius>0.162</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.8924863918901065 2.678972798762758 -0.8110770276274832</minPt>
+    <maxPt>2.2204863918901063 3.006972798762758 -0.4830770276274833</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.0564863918901066 2.842972798762758 -0.4330770276274833</center>
+    <radius>0.16399999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.2790625760973384 -2.4141818022329145 -0.8220867158288598</minPt>
+    <maxPt>-1.9470625760973386 -2.0821818022329146 -0.4900867158288599</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.1130625760973385 -2.2481818022329145 -0.4400867158288599</center>
+    <radius>0.16599999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.628232689406031 2.093321028972274 -0.833030277982336</minPt>
+    <maxPt>2.964232689406031 2.4293210289722738 -0.497030277982336</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.796232689406031 2.261321028972274 -0.447030277982336</center>
+    <radius>0.16799999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.93183226662568 -1.721731558743269 -0.8439088914585775</minPt>
+    <maxPt>-2.5918322666256803 -1.3817315587432693 -0.5039088914585775</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.7618322666256803 -1.5517315587432692 -0.45390889145857755</center>
+    <radius>0.16999999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.182468160423128 1.3059465562928028 -0.8547236990991407</minPt>
+    <maxPt>3.526468160423128 1.6499465562928028 -0.5107236990991407</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.3544681604231283 1.4779465562928027 -0.46072369909914074</center>
+    <radius>0.172</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.373692866969196 -0.8535786076051611 -0.8654758106177629</minPt>
+    <maxPt>-3.0256928669691963 -0.5055786076051612 -0.5174758106177629</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.199692866969196 -0.6795786076051611 -0.46747581061776294</center>
+    <radius>0.174</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.500162214740976 0.3731815516602405 -0.8761663039293719</minPt>
+    <maxPt>3.852162214740976 0.7251815516602405 -0.5241663039293719</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.6761622147409763 0.5491815516602405 -0.4741663039293719</center>
+    <radius>0.176</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.557772687068051 0.12591071103198673 -0.8867962264113207</minPt>
+    <maxPt>-3.201772687068051 0.4819107110319867 -0.5307962264113207</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.379772687068051 0.30391071103198675 -0.48079622641132075</center>
+    <radius>0.178</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.5437750222770177 -0.6337654072963611 -0.8973665961010275</minPt>
+    <maxPt>3.9037750222770176 -0.2737654072963611 -0.5373665961010275</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.723775022277018 -0.4537654072963611 -0.48736659610102756</center>
+    <radius>0.18</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.4568611878898032 1.1400485637292384 -0.9078784028338913</minPt>
+    <maxPt>-3.0928611878898034 1.5040485637292385 -0.5438784028338913</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.2748611878898033 1.3220485637292383 -0.49387840283389134</center>
+    <radius>0.182</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.2972223486530217 -1.6342352289505484 -0.9183326093250879</minPt>
+    <maxPt>3.6652223486530215 -1.2662352289505483 -0.5503326093250879</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.481222348653022 -1.4502352289505485 -0.5003326093250878</center>
+    <radius>0.184</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.066576031935836 2.105827970266484 -0.9287301521985911</minPt>
+    <maxPt>-2.6945760319358363 2.477827970266484 -0.5567301521985911</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.8805760319358362 2.291827970266484 -0.5067301521985911</center>
+    <radius>0.186</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.768161326484379 -2.544579114619202 -0.9390719429665315</minPt>
+    <maxPt>3.144161326484379 -2.168579114619202 -0.5630719429665315</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.9561613264843793 -2.3565791146192017 -0.5130719429665315</center>
+    <radius>0.188</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.406701618684349 2.94071204279204 -0.9493588689617927</minPt>
+    <maxPt>-2.026701618684349 3.32071204279204 -0.5693588689617927</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.216701618684349 3.13071204279204 -0.5193588689617926</center>
+    <radius>0.19</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.988335060419123 -3.2851367836831518 -0.9595917942265424</minPt>
+    <maxPt>2.372335060419123 -2.901136783683152 -0.5755917942265424</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.180335060419123 -3.0931367836831516 -0.5255917942265423</center>
+    <radius>0.192</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.520513659705053 3.5696551949243425 -0.969771560359221</minPt>
+    <maxPt>-1.1325136597050531 3.9576551949243424 -0.581771560359221</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.326513659705053 3.7636551949243424 -0.5317715603592209</center>
+    <radius>0.194</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.0118725745604735 -3.787151157909116 -0.9798989873223332</minPt>
+    <maxPt>1.4038725745604737 -3.3951511579091163 -0.5878989873223331</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.2078725745604735 -3.591151157909116 -0.5378989873223331</center>
+    <radius>0.196</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.4720718569985181 3.9317614579002593 -0.9899748742132399</minPt>
+    <maxPt>-0.0760718569985181 4.32776145790026 -0.5939748742132399</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.2740718569985181 4.129761457900259 -0.5439748742132399</center>
+    <radius>0.198</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.08838647711473577 -3.999023359604598 -1.0</minPt>
+    <maxPt>0.3116135228852642 -3.599023359604598 -0.6</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.11161352288526424 -3.7990233596045977 -0.5499999999999999</center>
+    <radius>0.2</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.6583625994623689 3.9859953195693985 -1.009975124224178</minPt>
+    <maxPt>1.0623625994623689 4.389995319569398 -0.6059751242241779</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.8603625994623689 4.187995319569398 -0.5559751242241778</center>
+    <radius>0.202</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.2263002768683395 -3.891347791055515 -1.0199009876724157</minPt>
+    <maxPt>-0.8183002768683395 -3.483347791055515 -0.6119009876724156</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.0223002768683396 -3.687347791055515 -0.5619009876724156</center>
+    <radius>0.20400000000000001</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.7804611347506785 3.7154216648507514 -1.029778313018444</minPt>
+    <maxPt>2.1924611347506784 4.127421664850751 -0.6177783130184439</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.9864611347506784 3.9214216648507514 -0.5677783130184438</center>
+    <radius>0.20600000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.309167028299696 -3.460252539253971 -1.039607805437114</minPt>
+    <maxPt>-1.893167028299696 -3.044252539253971 -0.623607805437114</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.1011670282996957 -3.2522525392539707 -0.573607805437114</center>
+    <radius>0.20800000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.801045521658337 3.1295597111411335 -1.0493901531919199</minPt>
+    <maxPt>3.221045521658337 3.5495597111411334 -0.6293901531919198</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.011045521658337 3.3395597111411335 -0.5793901531919198</center>
+    <radius>0.21000000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.245273326840375 -2.7286995133393503 -1.0591260281974</minPt>
+    <maxPt>-2.821273326840375 -2.3046995133393504 -0.6351260281973999</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.0332733268403747 -2.51669951333935 -0.5851260281973999</center>
+    <radius>0.21200000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.6318125133266856 2.2645833762623324 -1.06881608655772</minPt>
+    <maxPt>4.059812513326686 2.6925833762623324 -0.64081608655772</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.8458125133266856 2.4785833762623324 -0.59081608655772</center>
+    <radius>0.21400000000000002</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.951634368680821 -1.7455617480514785 -1.078460969082653</minPt>
+    <maxPt>-3.519634368680821 -1.3135617480514785 -0.6464609690826529</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.7356343686808207 -1.5295617480514785 -0.5964609690826529</center>
+    <radius>0.21600000000000003</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.196925970240327 1.1812757511784815 -1.0880613017821101</minPt>
+    <maxPt>4.632925970240327 1.6172757511784814 -0.6520613017821101</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.414925970240327 1.3992757511784815 -0.60206130178211</center>
+    <radius>0.21800000000000003</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.36127481572291 -0.5824791685039885 -1.0976176963403033</minPt>
+    <maxPt>-3.9212748157229105 -0.14247916850398845 -0.6576176963403032</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.141274815722911 -0.3624791685039885 -0.6076176963403032</center>
+    <radius>0.22000000000000003</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.439827251842454 -0.039165977545400917 -1.1071307505705477</minPt>
+    <maxPt>4.883827251842454 0.40483402245459915 -0.6631307505705476</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.661827251842454 0.18283402245459912 -0.6131307505705476</center>
+    <radius>0.22200000000000003</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.429416927886887 0.6713163776857305 -1.1166010488516727</minPt>
+    <maxPt>-3.981416927886887 1.1193163776857307 -0.6686010488516726</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.205416927886887 0.8953163776857305 -0.6186010488516726</center>
+    <radius>0.22400000000000003</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.32866007663504 -1.3011925072586028 -1.1260291625469296</minPt>
+    <maxPt>4.78066007663504 -0.8491925072586028 -0.6740291625469297</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.55466007663504 -1.0751925072586028 -0.6240291625469296</center>
+    <radius>0.22599999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.138015076958886 1.9158369510114743 -1.1354156504062622</minPt>
+    <maxPt>-3.6820150769588857 2.371836951011474 -0.6794156504062623</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.910015076958886 2.1438369510114743 -0.6294156504062622</center>
+    <radius>0.22799999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.8598044681552155 -2.5023807599182484 -1.1447610589527217</minPt>
+    <maxPt>4.3198044681552155 -2.0423807599182484 -0.6847610589527218</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.089804468155215 -2.2723807599182484 -0.6347610589527217</center>
+    <radius>0.22999999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.498198351147495 3.0483123685129363 -1.1540659228538015</minPt>
+    <maxPt>-3.034198351147495 3.5123123685129363 -0.6900659228538015</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.2661983511474952 3.280312368512936 -0.6400659228538015</center>
+    <radius>0.23199999999999998</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.0591589105980708 -3.5417434632830793 -1.1633307652783933</minPt>
+    <maxPt>3.5271589105980707 -3.0737434632830793 -0.6953307652783933</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.2931589105980708 -3.3077434632830793 -0.6453307652783933</center>
+    <radius>0.23399999999999999</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.5503466081648476 3.9716661715484163 -1.172556098240043</minPt>
+    <maxPt>-2.0783466081648476 4.443666171548417 -0.700556098240043</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.314346608164848 4.207666171548416 -0.6505560982400429</center>
+    <radius>0.236</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.9809894135352215 -4.328196038011838 -1.181742422927143</minPt>
+    <maxPt>2.4569894135352213 -3.8521960380118383 -0.705742422927143</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.2189894135352217 -4.090196038011838 -0.6557424229271429</center>
+    <radius>0.238</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.3617172391353312 4.602795472388671 -1.1908902300206643</minPt>
+    <maxPt>-0.8817172391353312 5.082795472388671 -0.7108902300206643</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.1217172391353312 4.842795472388671 -0.6608902300206643</center>
+    <radius>0.24</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.7043645093663263 -4.788472683220103 -1.2000000000000002</minPt>
+    <maxPt>1.1883645093663264 -4.304472683220103 -0.7160000000000002</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.9463645093663263 -4.546472683220103 -0.6660000000000001</center>
+    <radius>0.242</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.021744509175609637 4.879951554710427 -1.2090722034374521</minPt>
+    <maxPt>0.46625549082439033 5.367951554710427 -0.7210722034374522</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.22225549082439036 5.123951554710427 -0.6710722034374521</center>
+    <radius>0.244</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.6726001960834854 -4.873808467331113 -1.2181073012818833</minPt>
+    <maxPt>-0.18060019608348543 -4.381808467331113 -0.7261073012818833</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.42660019608348543 -4.627808467331112 -0.6761073012818832</center>
+    <radius>0.246</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.3646664118154892 4.768572698875696 -1.2271057451320089</minPt>
+    <maxPt>1.8606664118154892 5.264572698875696 -0.7311057451320089</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.6126664118154892 5.016572698875696 -0.6811057451320088</center>
+    <radius>0.248</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.0402727074187386 -4.564787758413551 -1.2360679774997898</minPt>
+    <maxPt>-1.5402727074187386 -4.064787758413551 -0.7360679774997898</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.7902727074187386 -4.314787758413551 -0.6860679774997898</center>
+    <radius>0.25</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.6853498570751078 4.265031787115625 -1.2449944320643649</minPt>
+    <maxPt>3.1893498570751078 4.769031787115624 -0.7409944320643649</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.937349857075108 4.5170317871156245 -0.6909944320643648</center>
+    <radius>0.252</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.2862333828329153 -3.8738959915767657 -1.2538855339169288</minPt>
+    <maxPt>-2.7782333828329153 -3.3658959915767657 -0.7458855339169288</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.0322333828329153 -3.6198959915767657 -0.6958855339169288</center>
+    <radius>0.254</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.829952125618279 3.397920940144433 -1.262741699796952</minPt>
+    <maxPt>4.341952125618279 3.909920940144433 -0.750741699796952</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.085952125618279 3.653920940144433 -0.700741699796952</center>
+    <radius>0.256</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.304506766670067 -2.8454914330729597 -1.2715633383201093</minPt>
+    <maxPt>-3.788506766670067 -2.3294914330729597 -0.7555633383201092</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.046506766670067 -2.5874914330729597 -0.7055633383201092</center>
+    <radius>0.258</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.6991323464344 2.2266915346975966 -1.280350850198276</minPt>
+    <maxPt>5.2191323464343995 2.7466915346975966 -0.7603508501982761</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.9591323464344 2.486691534697597 -0.710350850198276</center>
+    <radius>0.26</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.004539079216832 -1.5531222117372314 -1.2891046284519194</minPt>
+    <maxPt>-4.480539079216832 -1.0291222117372314 -0.7651046284519194</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.742539079216831 -1.2911222117372314 -0.7151046284519194</center>
+    <radius>0.262</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>5.213126136226581 0.837684837985816 -1.2978250586152114</minPt>
+    <maxPt>5.7411261362265815 1.3656848379858162 -0.7698250586152113</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>5.477126136226581 1.101684837985816 -0.7198250586152113</center>
+    <radius>0.264</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.319163560767387 -0.094334584349613 -1.3065125189341593</minPt>
+    <maxPt>-4.787163560767387 0.437665415650387 -0.7745125189341593</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-5.053163560767387 0.171665415650387 -0.7245125189341592</center>
+    <radius>0.266</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>5.3189380784032405 -0.6621916022663289 -1.3151673805580453</minPt>
+    <maxPt>5.85493807840324 -0.12619160226632886 -0.7791673805580452</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>5.58693807840324 -0.3941916022663289 -0.7291673805580452</center>
+    <radius>0.268</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.210859260739559 1.4166671326620033 -1.3237900077244502</minPt>
+    <maxPt>-4.670859260739559 1.9566671326620033 -0.7837900077244502</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.940859260739559 1.6866671326620033 -0.7337900077244501</center>
+    <radius>0.27</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.99552328062192 -2.1536822311484136 -1.3323807579381204</minPt>
+    <maxPt>5.5395232806219195 -1.6096822311484136 -0.7883807579381203</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>5.26752328062192 -1.8816822311484136 -0.7383807579381203</center>
+    <radius>0.272</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.675732343756592 2.8579585458065146 -1.340939982143925</minPt>
+    <maxPt>-4.127732343756592 3.4059585458065147 -0.7929399821439249</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.401732343756592 3.1319585458065147 -0.7429399821439249</center>
+    <radius>0.274</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.2564687800789 -3.514665492506169 -1.3494680248941462</minPt>
+    <maxPt>4.8084687800789 -2.962665492506169 -0.7974680248941463</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.5324687800789 -3.2386654925061693 -0.7474680248941462</center>
+    <radius>0.27599999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.7448237094276218 4.109731789947945 -1.3579652245103193</minPt>
+    <maxPt>-3.1888237094276217 4.665731789947945 -0.8019652245103194</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.4668237094276217 4.387731789947945 -0.7519652245103193</center>
+    <radius>0.27799999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.1498811411116474 -4.630145656118086 -1.3664319132398464</minPt>
+    <maxPt>3.7098811411116475 -4.070145656118086 -0.8064319132398464</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.429881141111647 -4.350145656118086 -0.7564319132398464</center>
+    <radius>0.27999999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.482559306163851 5.064237286243532 -1.3748684174075834</minPt>
+    <maxPt>-1.9185593061638508 5.628237286243532 -0.8108684174075834</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.200559306163851 5.346237286243532 -0.7608684174075834</center>
+    <radius>0.282</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.755411934694181 -5.401937517181518 -1.3832750575625967</minPt>
+    <maxPt>2.323411934694181 -4.833937517181519 -0.8152750575625968</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.039411934694181 -5.1179375171815185 -0.7652750575625967</center>
+    <radius>0.284</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.9823930593605452 5.63500699883507 -1.3916521486202797</minPt>
+    <maxPt>-0.41039305936054526 6.2070069988350705 -0.8196521486202798</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.6963930593605452 5.92100699883507 -0.7696521486202798</center>
+    <radius>0.286</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.17858973085052207 -5.757230732568805 -1.4</minPt>
+    <maxPt>0.7545897308505221 -5.181230732568805 -0.824</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.466589730850522 -5.469230732568804 -0.7739999999999999</center>
+    <radius>0.288</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.6400722452170394 5.764573489938593 -1.4083189157584592</minPt>
+    <maxPt>1.2200722452170394 6.344573489938593 -0.8283189157584593</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.9300722452170394 6.054573489938593 -0.7783189157584592</center>
+    <radius>0.29</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.4571438144944793 -5.655292380052553 -1.4166091947189146</minPt>
+    <maxPt>-0.8731438144944793 -5.071292380052554 -0.8326091947189146</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.1651438144944792 -5.363292380052553 -0.7826091947189145</center>
+    <radius>0.292</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.255983173379915 5.430003676004897 -1.4248711305964283</minPt>
+    <maxPt>2.843983173379915 6.018003676004897 -0.8368711305964284</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.549983173379915 5.724003676004896 -0.7868711305964283</center>
+    <radius>0.294</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.0200946213648487 -5.091701923522538 -1.4331050121192876</minPt>
+    <maxPt>-2.4280946213648487 -4.499701923522538 -0.8411050121192877</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.724094621364849 -4.795701923522538 -0.7911050121192876</center>
+    <radius>0.296</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.733468868705509 4.645730320025777 -1.4413111231467406</minPt>
+    <maxPt>4.329468868705509 5.241730320025777 -0.8453111231467406</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.031468868705509 4.943730320025777 -0.7953111231467406</center>
+    <radius>0.298</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.380917785083035 -4.099702350213142 -1.4494897427831779</minPt>
+    <maxPt>-3.780917785083035 -3.4997023502131417 -0.8494897427831779</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.080917785083035 -3.799702350213142 -0.7994897427831779</center>
+    <radius>0.3</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.948396602588522 3.4633756746114592 -1.4576411454889016</minPt>
+    <maxPt>5.552396602588522 4.067375674611459 -0.8536411454889016</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>5.250396602588522 3.7653756746114593 -0.8036411454889015</center>
+    <radius>0.302</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.423306759615603 -2.7484802693684576 -1.4657656011875906</minPt>
+    <maxPt>-4.815306759615603 -2.1404802693684575 -0.8577656011875906</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-5.119306759615602 -2.4444802693684577 -0.8077656011875906</center>
+    <radius>0.304</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>5.794772889156451 1.9685037879306702 -1.4738633753705965</minPt>
+    <maxPt>6.406772889156451 2.5805037879306703 -0.8618633753705965</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>6.100772889156451 2.27450378793067 -0.8118633753705965</center>
+    <radius>0.306</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-6.053887910645967 -1.1384380375473278 -1.4819347291981715</minPt>
+    <maxPt>-5.437887910645967 -0.5224380375473278 -0.8659347291981715</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-5.745887910645967 -0.8304380375473277 -0.8159347291981714</center>
+    <radius>0.308</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>6.193920771001746 0.2744913159885544 -1.4899799195977463</minPt>
+    <maxPt>6.813920771001746 0.8944913159885544 -0.8699799195977463</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>6.503920771001746 0.5844913159885544 -0.8199799195977463</center>
+    <radius>0.31</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-6.21048208716407 0.6062278820824901 -1.4979991993593593</minPt>
+    <maxPt>-5.58648208716407 1.2302278820824901 -0.8739991993593593</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-5.898482087164069 0.9182278820824901 -0.8239991993593593</center>
+    <radius>0.312</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>6.101643755925987 -1.4860496208974372 -1.5059928172283334</minPt>
+    <maxPt>6.729643755925987 -0.8580496208974372 -0.8779928172283334</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>6.415643755925987 -1.1720496208974371 -0.8279928172283334</center>
+    <radius>0.314</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.868009501459427 2.347097034803184 -1.5139610179953071</minPt>
+    <maxPt>-5.236009501459427 2.979097034803184 -0.8819610179953071</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-5.552009501459427 2.663097034803184 -0.8319610179953071</center>
+    <radius>0.316</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>5.512734308917985 -3.171649482411092 -1.5219040425836985</minPt>
+    <maxPt>6.148734308917986 -2.535649482411092 -0.8859040425836985</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>5.830734308917985 -2.853649482411092 -0.8359040425836984</center>
+    <radius>0.318</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.041491724336826 3.942506968090647 -1.5298221281347035</minPt>
+    <maxPt>-4.401491724336826 4.582506968090647 -0.8898221281347035</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.7214917243368255 4.262506968090647 -0.8398221281347035</center>
+    <radius>0.32</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.4623890659267635 -4.64334834190773 -1.5377155080899043</minPt>
+    <maxPt>5.106389065926764 -3.99934834190773 -0.8937155080899043</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.784389065926764 -4.32134834190773 -0.8437155080899043</center>
+    <radius>0.322</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.785831668028704 5.259075829587458 -1.545584412271571</minPt>
+    <maxPt>-3.1378316680287037 5.907075829587457 -0.8975844122715709</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.461831668028704 5.583075829587457 -0.8475844122715709</center>
+    <radius>0.324</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.0243383442521496 -5.776138639219644 -1.553429066960741</minPt>
+    <maxPt>3.67633834425215 -5.124138639219644 -0.901429066960741</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.3503383442521497 -5.450138639219644 -0.8514290669607409</center>
+    <radius>0.32599999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.1923112884277627 6.182828738905211 -1.5612496949731396</minPt>
+    <maxPt>-1.5363112884277628 6.83882873890521 -0.9052496949731397</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.8643112884277628 6.510828738905211 -0.8552496949731396</center>
+    <radius>0.32799999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.305764609193426 -6.46954239381565 -1.5690465157330258</minPt>
+    <maxPt>1.965764609193426 -5.80954239381565 -0.9090465157330259</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.635764609193426 -6.13954239381565 -0.8590465157330258</center>
+    <radius>0.32999999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.38201659546092076 6.629001683571399 -1.5768197453450252</minPt>
+    <maxPt>0.28198340453907916 7.293001683571399 -0.9128197453450253</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.0500165954609208 6.961001683571399 -0.8628197453450253</center>
+    <radius>0.33199999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-0.5606483838827033 -6.656430979860732 -1.584569596664017</minPt>
+    <maxPt>0.1073516161172966 -5.988430979860732 -0.916569596664017</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-0.22664838388270336 -6.322430979860733 -0.866569596664017</center>
+    <radius>0.33399999999999996</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>1.503341749598166 6.5496842354357145 -1.5922962793631439</minPt>
+    <maxPt>2.175341749598166 7.221684235435714 -0.920296279363144</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.8393417495981659 6.885684235435715 -0.8702962793631439</center>
+    <radius>0.33599999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-2.426949190118016 -6.309319902222862 -1.6</minPt>
+    <maxPt>-1.750949190118016 -5.633319902222862 -0.9240000000000002</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-2.088949190118016 -5.971319902222862 -0.8740000000000001</center>
+    <radius>0.33799999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>3.312518164267615 5.9386213392838165 -1.6076809620810595</minPt>
+    <maxPt>3.992518164267615 6.618621339283816 -0.9276809620810595</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.6525181642676148 6.278621339283816 -0.8776809620810595</center>
+    <radius>0.33999999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-4.141646574146216 -5.443561669978848 -1.6153393661244042</minPt>
+    <maxPt>-3.4576465741462155 -4.759561669978848 -0.9313393661244043</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.7996465741462155 -5.101561669978849 -0.8813393661244042</center>
+    <radius>0.34199999999999997</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.896864641984847 4.8327131797861345 -1.6229754097208002</minPt>
+    <maxPt>5.584864641984847 5.520713179786134 -0.9349754097208003</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>5.240864641984848 5.176713179786135 -0.8849754097208002</center>
+    <radius>0.344</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.562002076334747 -4.117102488747148 -1.630589287593181</minPt>
+    <maxPt>-4.870002076334747 -3.4251024887471475 -0.9385892875931809</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-5.216002076334747 -3.7711024887471476 -0.8885892875931809</center>
+    <radius>0.346</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>6.122532828320499 3.3100138619253223 -1.6381811916545836</minPt>
+    <maxPt>6.818532828320499 4.0060138619253225 -0.9421811916545837</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>6.470532828320499 3.658013861925322 -0.8921811916545836</center>
+    <radius>0.348</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-6.565890115187155 -2.426744114093533 -1.6457513110645907</minPt>
+    <maxPt>-5.865890115187155 -1.7267441140935331 -0.9457513110645908</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-6.215890115187156 -2.076744114093533 -0.8957513110645907</center>
+    <radius>0.35</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>6.881744919886881 1.484313598135888 -1.6532998322843198</minPt>
+    <maxPt>7.5857449198868805 2.188313598135888 -0.9492998322843198</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>7.233744919886881 1.836313598135888 -0.8992998322843198</center>
+    <radius>0.352</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-7.062241852622295 -0.5011387183904473 -1.6608269391300143</minPt>
+    <maxPt>-6.354241852622295 0.20686128160955264 -0.9528269391300144</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-6.708241852622295 -0.14713871839044734 -0.9028269391300143</center>
+    <radius>0.354</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>7.102187070615078 -0.5033277401336183 -1.6683328128252666</minPt>
+    <maxPt>7.814187070615078 0.20867225986638172 -0.9563328128252666</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>7.458187070615078 -0.14732774013361827 -0.9063328128252666</center>
+    <radius>0.356</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-6.999183880542031 1.5089814466588405 -1.6758176320519302</minPt>
+    <maxPt>-6.283183880542031 2.2249814466588402 -0.9598176320519303</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-6.641183880542031 1.8669814466588406 -0.9098176320519302</center>
+    <radius>0.358</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>6.753712676127197 -2.4954689115111837 -1.6832815729997477</minPt>
+    <maxPt>7.473712676127197 -1.7754689115111837 -0.9632815729997477</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>7.113712676127197 -2.135468911511184 -0.9132815729997477</center>
+    <radius>0.36</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-6.369152971103721 3.442599371213655 -1.6907248094147422</minPt>
+    <maxPt>-5.6451529711037205 4.166599371213655 -0.9667248094147423</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-6.007152971103721 3.804599371213655 -0.9167248094147422</center>
+    <radius>0.362</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>5.851746453119671 -4.330757837653977 -1.6981475126464085</minPt>
+    <maxPt>6.579746453119671 -3.602757837653977 -0.9701475126464085</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>6.215746453119671 -3.9667578376539767 -0.9201475126464085</center>
+    <radius>0.364</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.210501183705648 5.141310865392409 -1.7055498516937369</minPt>
+    <maxPt>-4.478501183705648 5.873310865392409 -0.9735498516937369</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.844501183705648 5.507310865392409 -0.9235498516937368</center>
+    <radius>0.366</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.457038278757554 -5.856996652012865 -1.7129319932501073</minPt>
+    <maxPt>5.1930382787575535 -5.120996652012865 -0.9769319932501073</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.825038278757554 -5.488996652012864 -0.9269319932501072</center>
+    <radius>0.368</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.605383598282991 6.462291320362461 -1.7202941017470885</minPt>
+    <maxPt>-2.8653835982829907 7.202291320362461 -0.9802941017470885</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.235383598282991 6.832291320362461 -0.9302941017470885</center>
+    <radius>0.37</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.671708128648751 -6.94374363548311 -1.7276363393971712</minPt>
+    <maxPt>3.4157081286487507 -6.19974363548311 -0.9836363393971712</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>3.043708128648751 -6.57174363548311 -0.9336363393971712</center>
+    <radius>0.372</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.6740218310650705 7.29027097638473 -1.734958866235469</minPt>
+    <maxPt>-0.9260218310650705 8.03827097638473 -0.9869588662354689</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.3000218310650706 7.66427097638473 -0.9369588662354689</center>
+    <radius>0.374</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.631826733450808 -7.4934101034773795 -1.7422618401604177</minPt>
+    <maxPt>1.383826733450808 -6.74141010347738 -0.9902618401604177</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>1.007826733450808 -7.117410103477379 -0.9402618401604177</center>
+    <radius>0.376</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>0.43426406238250803 7.547517123142089 -1.749545416973504</minPt>
+    <maxPt>1.190264062382508 8.303517123142088 -0.9935454169735041</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>0.812264062382508 7.925517123142089 -0.943545416973504</center>
+    <radius>0.378</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-1.5029340196022463 -7.449912035233854 -1.7568097504180442</minPt>
+    <maxPt>-0.7429340196022463 -6.689912035233855 -0.9968097504180442</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-1.1229340196022464 -7.0699120352338545 -0.9468097504180442</center>
+    <radius>0.38</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>2.552589391111112 7.2009643382249156 -1.7640549922170505</minPt>
+    <maxPt>3.316589391111112 7.964964338224916 -1.0000549922170505</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>2.9345893911111123 7.582964338224915 -0.9500549922170505</center>
+    <radius>0.382</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-3.5617955078209182 -6.804117338822628 -1.7712812921102037</minPt>
+    <maxPt>-2.793795507820918 -6.036117338822629 -1.0032812921102037</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-3.1777955078209184 -6.420117338822628 -0.9532812921102036</center>
+    <radius>0.384</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>4.509714316283974 6.265850044926335 -1.778488797889961</minPt>
+    <maxPt>5.281714316283974 7.037850044926335 -1.006488797889961</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>4.895714316283974 6.651850044926335 -0.956488797889961</center>
+    <radius>0.386</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-5.376534237783861 -5.595576787958316 -1.7856776554368237</minPt>
+    <maxPt>-4.600534237783862 -4.819576787958316 -1.0096776554368236</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-4.9885342377838615 -5.207576787958316 -0.9596776554368236</center>
+    <radius>0.388</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>6.143883489354907 4.805485997194475 -1.7928480087537881</minPt>
+    <maxPt>6.923883489354907 5.585485997194475 -1.012848008753788</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>6.533883489354906 5.195485997194474 -0.9628480087537881</center>
+    <radius>0.39</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-6.795218258012611 -3.9103208085746686 -1.7999999999999998</minPt>
+    <maxPt>-6.011218258012611 -3.1263208085746683 -1.0159999999999998</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-6.40321825801261 -3.5183208085746687 -0.9659999999999997</center>
+    <radius>0.392</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>7.3161775493207095 2.927105407534142 -1.8071337695236398</minPt>
+    <maxPt>8.10417754932071 3.715105407534142 -1.0191337695236398</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>7.71017754932071 3.321105407534142 -0.9691337695236397</center>
+    <radius>0.394</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>-7.694897133161586 -1.874822154248663 -1.8142494558940578</minPt>
+    <maxPt>-6.902897133161586 -1.082822154248663 -1.0222494558940578</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>-7.298897133161586 -1.4788221542486628 -0.9722494558940578</center>
+    <radius>0.396</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Box">
+    <shader ref="blueL" />
+    <minPt>7.922275772478116 0.7740455960770433 -1.821347195933177</minPt>
+    <maxPt>8.718275772478115 1.5700455960770432 -1.025347195933177</maxPt>
+  </surface>
+  <surface type="Cylinder">
+    <shader ref="blue" />
+    <center>8.320275772478116 1.1720455960770433 -0.975347195933177</center>
+    <radius>0.398</radius>
+    <height>0.1</height>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-7.992187830663246 0.35345958665498556 -1.2284271247461902</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8284271247461903</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream0" />
+    <center>-7.992187830663246 0.35345958665498556 -0.028427124746190247</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>7.901637392880549 -1.4851688494685944 -1.2354893757515648</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.835489375751565</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream1" />
+    <center>7.901637392880549 -1.4851688494685944 -0.035489375751564856</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-7.6508501857714375 2.598247762412421 -1.2425340807103789</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.842534080710379</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream2" />
+    <center>-7.6508501857714375 2.598247762412421 -0.042534080710378896</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>7.243300816162944 -3.6700127093203943 -1.2495613697550012</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8495613697550013</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream3" />
+    <center>7.243300816162944 -3.6700127093203943 -0.04956136975500125</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-6.685674147992779 4.678393013296451 -1.2565713714171398</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.85657137141714</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream4" />
+    <center>-6.685674147992779 4.678393013296451 -0.05657137141713986</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>5.987760971590122 -5.602385076652809 -1.2635642126552704</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8635642126552705</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream5" />
+    <center>5.987760971590122 -5.602385076652809 -0.06356421265527046</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-5.162289463730414 6.422489197550896 -1.2705400188814648</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.870540018881465</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream6" />
+    <center>-5.162289463730414 6.422489197550896 -0.07054001888146488</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>4.224695262909321 -7.121119991655212 -1.2774989139876314</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8774989139876315</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream7" />
+    <center>4.224695262909321 -7.121119991655212 -0.07749891398763142</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-3.192834264820723 7.682981801188046 -1.2844410203711916</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8844410203711917</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream8" />
+    <center>-3.192834264820723 7.682981801188046 -0.08444102037119161</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>2.086643451312277 -8.095401108474835 -1.291366458960192</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8913664589601922</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream9" />
+    <center>2.086643451312277 -8.095401108474835 -0.09136645896019213</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-0.9277561767597835 8.348608774908792 -1.2982753492378878</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.8982753492378879</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream10" />
+    <center>-0.9277561767597835 8.348608774908792 -0.09827534923788783</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-0.2609206748127946 -8.435965884322627 -1.30516780926679</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.90516780926679</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream11" />
+    <center>-0.2609206748127946 -8.435965884322627 -0.10516780926679004</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>1.455659401793956 8.354128063775947 -1.3120439557122072</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.9120439557122073</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream12" />
+    <center>1.455659401793956 8.354128063775947 -0.11204395571220727</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-2.632385120665111 -8.103144363548074 -1.3189039038652846</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.9189039038652846</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream13" />
+    <center>-2.632385120665111 -8.103144363548074 -0.1189039038652846</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>3.767160870987193 7.686488077926292 -1.325747767665559</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.925747767665559</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream14" />
+    <center>3.767160870987193 7.686488077926292 -0.12574776766555895</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-4.836674415344521 -7.111018253383388 -1.332575659723036</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.9325756597230361</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream15" />
+    <center>-4.836674415344521 -7.111018253383388 -0.1325756597230361</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>5.8187168367958035 6.3868720335692535 -1.3393876913398137</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.9393876913398138</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream16" />
+    <center>5.8187168367958035 6.3868720335692535 -0.13938769133981377</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-6.6926431144637 -5.527289402810533 -1.346183972531247</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.946183972531247</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream17" />
+    <center>-6.6926431144637 -5.527289402810533 -0.14618397253124704</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>7.439805137319004 4.548373282693689 -1.35296461204668</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.9529646120466801</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream18" />
+    <center>7.439805137319004 4.548373282693689 -0.1529646120466801</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Cone">
+    <shader ref="cone" />
+    <center>-8.043948093017399 -3.4687892811241423 -1.3597297173897482</center>
+    <radius>0.4</radius>
+    <height>1.2</height>
+    <tipz>-1.9597297173897483</tipz>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="icecream19" />
+    <center>-8.043948093017399 -3.4687892811241423 -0.15972971738974828</center>
+    <radius>0.99</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>0.2678065310475155 2.78083888370055 5.974891476267082</center>
+    <radius>0.06258763884246565</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>8.722603367003686 -6.625627561941869 5.259917290596633</center>
+    <radius>0.04652849550648047</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>8.78509651633566 -7.632817893375279 5.817749082152382</center>
+    <radius>0.07172184769149083</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-7.975256912165129 -6.388238454214137 5.838396606257384</center>
+    <radius>0.11558409160262029</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>0.6490141229772313 -9.535992143217292 5.8815499046748965</center>
+    <radius>0.10453929060006492</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-1.3831203290580714 -9.542838202177899 5.229421969646612</center>
+    <radius>0.029854651070719176</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-7.3411503138937135 -4.842821484012257 5.420987430809673</center>
+    <radius>0.09396477119014046</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-6.243471714705087 -5.757440250147736 5.024346418392655</center>
+    <radius>0.10900871418886005</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>8.203952595359002 7.381117954180809 5.712188506333598</center>
+    <radius>0.07823300740585766</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-9.34320070941032 -4.501285522162062 5.363013708265492</center>
+    <radius>0.03495808898520997</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>6.6207449022565115 3.0405597836376135 5.627539083683256</center>
+    <radius>0.03797526829941894</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>5.602100412566493 -3.855655060379015 5.392565497886245</center>
+    <radius>0.03413455392553253</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>6.592068194494836 2.752469558954875 5.784807269394333</center>
+    <radius>0.06497322399676247</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>1.8590577854202461 1.70907401780517 5.476546145798875</center>
+    <radius>0.08596152003277764</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-3.751309153608169 0.7252958729674912 5.172170932899714</center>
+    <radius>0.0654385575091779</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>1.5171843942933307 -1.1628192806703872 5.925223433438939</center>
+    <radius>0.08290731391855517</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-0.6885987352965977 0.3432226476508742 5.190175896357257</center>
+    <radius>0.09867685926010963</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>2.4011504771308356 -0.8935611468640126 5.409537528291003</center>
+    <radius>0.06524783269972179</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>2.470547756129724 -7.620764368826 5.554797536209167</center>
+    <radius>0.1006117909481469</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>1.310561071812451 2.9559265684140783 5.074974365805843</center>
+    <radius>0.06585626931452021</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-7.947537307510619 9.533962656324583 5.2005850395108695</center>
+    <radius>0.09470994510183664</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>1.2530958450557268 -2.3634301917336487 5.941636735631668</center>
+    <radius>0.06472819840953693</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-9.225632060534174 -5.973088876629649 5.520139105058458</center>
+    <radius>0.07453360135080714</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-0.7715690289420056 -9.909876496438361 5.642832621815136</center>
+    <radius>0.07879571022146321</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>6.651735560347763 -4.354487603535 5.434699304891272</center>
+    <radius>0.09742723929872202</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-0.07379102341608501 0.41077104520490515 5.848123940827413</center>
+    <radius>0.05905880772004766</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>1.5501649338112529 -2.679495500720619 5.189780663607532</center>
+    <radius>0.10305070672144487</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-1.7589367516000962 -3.4718278908782345 5.702687653265617</center>
+    <radius>0.03838190029774496</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>5.903874416381679 2.43929563127228 5.921286294242875</center>
+    <radius>0.058673201783974796</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>0.2937411927623863 4.8818209878954235 5.7183326578562825</center>
+    <radius>0.06470538245381138</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-2.154361727714469 -2.9418496958380107 5.563041386956693</center>
+    <radius>0.027724516382610132</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-7.818258261450406 0.898243885166309 5.366598361183518</center>
+    <radius>0.04134576617543273</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-5.256726404769849 -0.06725982027865562 5.726172652045138</center>
+    <radius>0.05993251949358276</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>6.612225339113923 -3.8749366476203644 5.381254094289015</center>
+    <radius>0.11090569969354605</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-7.046241253985368 5.539477147223881 5.069909980826212</center>
+    <radius>0.044932386983895595</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-3.147472295293829 -5.632416748023221 5.015284283555638</center>
+    <radius>0.10279390964612312</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>8.500069862022112 0.6459439485065097 5.950934025912279</center>
+    <radius>0.09820792971991199</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>0.8475631515183117 -3.487572354088659 5.471434396581873</center>
+    <radius>0.032135320166391104</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>5.311864487251022 9.070195316713225 5.4754517525146165</center>
+    <radius>0.05315567048158977</radius>
+  </surface>
+  <surface type="Sphere">
+    <shader ref="star" />
+    <center>-7.8101179743731475 -9.981808999874636 5.455200292574532</center>
+    <radius>0.12485304893323504</radius>
+  </surface>
+</scene>

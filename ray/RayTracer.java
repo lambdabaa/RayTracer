@@ -141,7 +141,8 @@ public class RayTracer {
 			ArrayList<Light> lights, int depth, double contribution, boolean internal) {
 		
 		// Reset the output color
-		outColor.set(0, 0, 0);
+		// TODO: change back to 0,0,0; here for ocean color
+		outColor.set(0.1, 0.1, 1);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();

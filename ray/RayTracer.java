@@ -2,6 +2,8 @@ package ray;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import ray.light.Light;
 import ray.math.Color;
@@ -93,67 +95,51 @@ public class RayTracer {
 		// Timing counters
 		long startTime = System.currentTimeMillis();
 
-		Ray ray = new Ray();
-		Color pixelColor = new Color(255, 255, 255);
-		Color rayColor = new Color();
 		ArrayList<Light> lights = scene.getLights();
-
-		int total = height * width;
-		int counter = 0;
-		int lastShownProgress = 0;
 		double invHeight = 1.0 / height;
 		double invWidth = 1.0 / width;
-				
+		
+		System.out.println("Initializing worker threads...");
+		List<RayTracerWorker> workers = new LinkedList<RayTracerWorker>();
+		List<Thread> threads = new LinkedList<Thread>();
+		for (int i = 0; i < 32; i++) {
+		  RayTracerWorker worker = new RayTracerWorker(cam, scene, new Ray(), new Color(), lights, invWidth, invHeight);
+		  Thread thread = new Thread(worker);
+		  workers.add(worker);
+		  threads.add(thread);
+		}
+		
+		System.out.println("Distributing work between workers...");
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
-				cam.getRay(ray, (x + 0.5) * invWidth, (y + 0.5) * invHeight);
-				shadeRay(rayColor, scene, ray, lights, 1, 1, false);
-				pixelColor.set(rayColor);
-				
-				// Gamma correct and clamp pixel values
-				pixelColor.gammaCorrect(2.2);
-				pixelColor.clamp(0, 1);
-				image.setPixelColor(pixelColor, x, y);
-				
-				counter++;
-				int progress = 20 * counter / total;
-				if (progress != lastShownProgress) {
-					lastShownProgress = progress;
-					System.out.print(".");
-				}
+			  workers.get((x + y) % workers.size()).todo.add(new Work(x, y, new Color(255, 255, 255)));
 			}
+		}
+		
+		System.out.println("Starting workers...");
+		for (Thread thread : threads) {
+		  thread.start();
+		}
+		
+		System.out.println("Waiting on workers...");
+		for (Thread thread : threads) {
+		  try {
+        thread.join();
+        thread = null;
+      } catch (InterruptedException e) {
+      }
+		}
+		
+		System.out.println("Coloring image...");
+		for (RayTracerWorker worker : workers) {
+		  for (Work work : worker.todo) {
+		    image.setPixelColor(work.color, (int) work.x, (int) work.y);
+		  }
 		}
 
 		// Output time
 		long totalTime = (System.currentTimeMillis() - startTime);
 		System.out.printf(" done in %5.2f seconds.\n", totalTime / 1000.0);
-
-	}
-
-	/**
-	 * This method returns the color along a single ray in outColor.
-	 *
-	 * @param outColor output space
-	 * @param scene the scene
-	 * @param ray the ray to shade
-	 */
-	public static void shadeRay(Color outColor, Scene scene, Ray ray,// Workspace workspace, 
-			ArrayList<Light> lights, int depth, double contribution, boolean internal) {
-		
-		// Reset the output color
-		// TODO: change back to 0,0,0; here for ocean color
-		outColor.set(0, 0, 0);
-
-		IntersectionRecord eyeRecord = new IntersectionRecord();
-		Vector3 toEye = new Vector3();
-		if (!scene.intersect(eyeRecord, ray, false)) {
-			return;
-		}
-		
-		toEye.sub(scene.camera.viewPoint, eyeRecord.location);
-		if (eyeRecord.surface != null) {
-			eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
-		}
 	}
 
 }

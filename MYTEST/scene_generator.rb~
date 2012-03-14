@@ -81,14 +81,6 @@ begin
   2)
   gen.write_tag('shader', false, false, false, 1)
   
-  gen.write_tag('shader', true, true, false, 1, {'name' => 'black', 'type' => 'Phong'})
-  gen.write_tag_and_data({
-    'diffuseColor' => '.1 .1 .1',
-    'specularColor' => '1 1 1',
-    'exponent' => 20},
-  2)
-  gen.write_tag('shader', false, false, false, 1)
-
     gen.write_tag('shader', true, true, false, 1, {'name' => 'blueL', 'type' => 'Lambertian'})
   gen.write_tag_and_data({
     'diffuseColor' => '.2 .3 .8'},
@@ -124,45 +116,6 @@ begin
   gen.write_tag_and_data({
       'center' => "#{0} #{0} #{2.5}",
       'radius' => "#{2.5}"
-    },
-    2)
-    gen.write_tag('surface', false, false, false, 1)
-
-  gen.write_tag('surface', true, true, false, 1, {'type' => 'Sphere'})
-  gen.write_tag('shader', true, true, true, 2, {'ref' => 'black'})
-  gen.write_tag_and_data({
-      'center' => "#{2.45} #{0.6} #{2.5}",
-      'radius' => "#{0.25}"
-    },
-    2)
-    gen.write_tag('surface', false, false, false, 1)
-
-
-  gen.write_tag('surface', true, true, false, 1, {'type' => 'Sphere'})
-  gen.write_tag('shader', true, true, true, 2, {'ref' => 'black'})
-  gen.write_tag_and_data({
-      'center' => "#{2.45} #{-0.6} #{2.5}",
-      'radius' => "#{0.25}"
-    },
-    2)
-    gen.write_tag('surface', false, false, false, 1)
-
-  gen.write_tag('surface', true, true, false, 1, {'type' => 'Sphere'})
-  gen.write_tag('shader', true, true, true, 2, {'ref' => 'cone'})
-  gen.write_tag_and_data({
-      'center' => "#{2.45} #{0} #{1.9}",
-      'radius' => "#{0.25}"
-    },
-    2)
-    gen.write_tag('surface', false, false, false, 1)
-
-    gen.write_tag('surface', true, true, false, 1, {'type' => 'Cone'})
-    gen.write_tag('shader', true, true, true, 2, {'ref' => 'cone'})
-    gen.write_tag_and_data({
-      'center' => "0 0 5",
-      'radius' => "1.25",
-      'height' => "2.5",
-      'tipz' => "7.5"
     },
     2)
     gen.write_tag('surface', false, false, false, 1)

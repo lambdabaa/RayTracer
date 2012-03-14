@@ -1,7 +1,41 @@
+Hw3 Gareth Aye, Daisy Zhuo
 4. Our optimizations included
 
 	- Adding local variables to reduce function calls in inner loops
 	- Removing redundant computations
 	- Where possible, using multiplication instead of division
 	- Removing unneccessary Vector3 instantiations
+	- Setting the rayIn.end to the minimum t we found
+
+
+Running time on the linux machine in 632:
+(Some time are largely decreased but in few circumstances the improvement is not much better.)
+
+
+
+
+Before any fix:
+Rendering TEST2/wire-box-3.xml       .................... done in  0.31 seconds.
+Rendering TEST2/one-shiny-cylinder.xml  .................... done in  0.15 seconds.
+Rendering TEST2/solids.xml           .................... done in  0.33 seconds.
+Rendering TEST2/one-blue-cylinder.xml  .................... done in  0.06 seconds.
+Rendering TEST2/double-cone.xml      .................... done in  0.09 seconds.
+Rendering TEST2/flat-red-cone.xml    .................... done in  0.11 seconds.
+Rendering TEST2/four-spheres.xml     .................... done in  0.07 seconds.
+Rendering TEST2/two-boxes.xml        .................... done in  0.05 seconds.
+Rendering TEST2/snow-man.xml         .................... done in  0.07 seconds.
+Rendering TEST2/green-cone-and-sphere.xml  .................... done in  0.13 seconds.
+
+
+Rendering TEST2/wire-box-3.xml       .................... done in  0.20 seconds.
+Rendering TEST2/one-shiny-cylinder.xml  .................... done in  0.08 seconds.
+Rendering TEST2/solids.xml           .................... done in  0.34 seconds.
+Rendering TEST2/one-blue-cylinder.xml  .................... done in  0.06 seconds.
+Rendering TEST2/double-cone.xml      .................... done in  0.11 seconds.
+Rendering TEST2/flat-red-cone.xml    .................... done in  0.12 seconds.
+Rendering TEST2/four-spheres.xml     .................... done in  0.08 seconds.
+Rendering TEST2/two-boxes.xml        .................... done in  0.06 seconds.
+Rendering TEST2/snow-man.xml         .................... done in  0.06 seconds.
+Rendering TEST2/green-cone-and-sphere.xml  .................... done in  0.14 seconds.
+
 

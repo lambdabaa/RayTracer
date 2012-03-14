@@ -53,6 +53,7 @@ public class Box extends Surface {
 			return false;
 		}
 		
+		rayIn.end = mint;
 		outRecord.t = mint;
 		outRecord.surface = this;
 		Vector3 scaledDirection = Vector3.getScaledVector(rayIn.direction, outRecord.t);

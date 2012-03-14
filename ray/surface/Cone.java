@@ -98,7 +98,7 @@ public class Cone extends Surface {
 	  if (t == null || t > rayIn.end || t < rayIn.start) {
 	    return false;
 	  }
-	  		
+	  rayIn.end = t;
 	  outRecord.surface = this;
 	  outRecord.t = t;
 	  outRecord.location.add(rayIn.origin, Vector3.getScaledVector(rayIn.direction, t));

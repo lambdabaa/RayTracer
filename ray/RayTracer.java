@@ -142,7 +142,7 @@ public class RayTracer {
 		
 		// Reset the output color
 		// TODO: change back to 0,0,0; here for ocean color
-		outColor.set(0.1, 0.1, 1);
+		outColor.set(0, 0, 0);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();

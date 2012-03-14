@@ -1,0 +1,7 @@
+4. Our optimizations included
+
+	- Adding local variables to reduce function calls in inner loops
+	- Removing redundant computations
+	- Where possible, using multiplication instead of division
+	- Removing unneccessary Vector3 instantiations
+

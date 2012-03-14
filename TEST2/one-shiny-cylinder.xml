@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A cylinder floating in empty space.
+ -->
+<scene>
+  <camera>
+    <viewPoint>20 5 10</viewPoint>
+    <viewDir>-4 -1 -2</viewDir>
+    <projNormal>4 1 2</projNormal>
+    <viewUp>0 -1 8</viewUp>
+    <projDistance>4</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300 
+  </image>
+  <shader name="green" type="Phong">
+    <diffuseColor>.3 .8 .2</diffuseColor>
+    <specularColor>1 1 0</specularColor>
+    <exponent>20</exponent>
+  </shader>
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1 1</center>
+    <radius>1.2</radius>
+	<height>6</height>
+  </surface>
+  <light>
+    <position>4 2 3</position>
+    <intensity>1 1 1</intensity>
+  </light>
+    <light>
+    <position>20 5 10</position>
+    <intensity>0.4 0.1 0.1</intensity>
+  </light>
+</scene>

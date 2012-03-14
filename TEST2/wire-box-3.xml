@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A view of a stick-and-ball cube through a "normal" 
+    perspective camera.  The balls are colored according to the 
+    coordinates of the corners, with R, G, and B corresponding 
+    to x, y, and z.  This way you can tell which side is which: 
+    for instance white (1,1,1) is the +x, +y, +z corner, and 
+    magenta (1, 0, 1) is the +x, -y, +z corner.
+ -->
+<scene>
+  <camera>
+    <viewPoint>10 4.2 6</viewPoint>
+    <viewDir>-5 -2.1 -3</viewDir>
+    <projNormal>5 2.1 3</projNormal>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>6</projDistance>
+    <viewWidth>4</viewWidth>
+    <viewHeight>2.25</viewHeight>
+  </camera>
+  <image>
+    320 180
+  </image>
+
+  <shader name="ball000" type="Phong">
+    <diffuseColor>.05 .05 .05</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball001" type="Phong">
+    <diffuseColor>.1 .1 .8</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball010" type="Phong">
+    <diffuseColor>.1 .6 .15</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball011" type="Phong">
+    <diffuseColor>0 .6 1</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball100" type="Phong">
+    <diffuseColor>.9 0 0</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball101" type="Phong">
+    <diffuseColor>.9 .1 .9</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball110" type="Phong">
+    <diffuseColor>.9 .9 .1</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="ball111" type="Phong">
+    <diffuseColor> 1  1  1</diffuseColor><specularColor>.8 .8 .8</specularColor><exponent>50</exponent>
+  </shader>
+  <shader name="stick" type="Lambertian">
+    <diffuseColor>.6 .5 .3</diffuseColor>
+  </shader>
+  <shader name="gray" type="Lambertian">
+    <diffuseColor>.4 .4 .4</diffuseColor>
+  </shader>
+
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1.05 -1.05 -1</minPt><maxPt>-.95 -.95 1</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1.05   .95 -1</minPt><maxPt>-.95 1.05 1</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>  .95 -1.05 -1</minPt><maxPt>1.05 -.95 1</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>  .95   .95 -1</minPt><maxPt>1.05 1.05 1</maxPt></surface>
+
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1.05 -1 -1.05</minPt><maxPt>-.95 1 -.95</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1.05 -1   .95</minPt><maxPt>-.95 1 1.05</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>  .95 -1 -1.05</minPt><maxPt>1.05 1 -.95</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>  .95 -1   .95</minPt><maxPt>1.05 1 1.05</maxPt></surface>
+
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1 -1.05 -1.05</minPt><maxPt>1 -.95 -.95</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1 -1.05   .95</minPt><maxPt>1 -.95 1.05</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1   .95 -1.05</minPt><maxPt>1 1.05 -.95</maxPt></surface>
+  <surface type="Box"><shader ref="stick" />
+    <minPt>-1   .95   .95</minPt><maxPt>1 1.05 1.05</maxPt></surface>
+
+  <surface type="Sphere"><shader ref="ball000" />
+    <center>-1 -1 -1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball001" />
+    <center>-1 -1  1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball010" />
+    <center>-1  1 -1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball011" />
+    <center>-1  1  1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball100" />
+    <center> 1 -1 -1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball101" />
+    <center> 1 -1  1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball110" />
+    <center> 1  1 -1</center><radius>0.2</radius></surface>
+  <surface type="Sphere"><shader ref="ball111" />
+    <center> 1  1  1</center><radius>0.2</radius></surface>
+
+  <surface type="Box">
+    <shader ref="gray" />
+    <minPt>-50 -1.5 -50</minPt>
+    <maxPt>50 -1.2 50</maxPt>
+  </surface>
+
+  <light>
+    <position> 4  5 -3</position><intensity> 1  1  1</intensity>
+  </light>
+  <light>
+    <position>-4  3  5</position><intensity>.7 .7 .7</intensity>
+  </light>
+  <light>
+    <position>10 4.2 6</position><intensity>.3 .3 .3</intensity>
+  </light>
+</scene>

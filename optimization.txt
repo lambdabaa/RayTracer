@@ -6,12 +6,10 @@ Hw3 Gareth Aye, Daisy Zhuo
 	- Where possible, using multiplication instead of division
 	- Removing unneccessary Vector3 instantiations
 	- Setting the rayIn.end to the minimum t we found
+  - Multithreading like it's 1999
 
 
 Running time on the linux machine in 632:
-(Some time are largely decreased but in few circumstances the improvement is not much better.)
-
-
 
 
 Before any fix:

@@ -1,6 +1,5 @@
 package ray.math;
 
-import ray.RayTracer;
 
 /**********************************************************************************
  * GENERAL CONTRACT FOR ALL MATH CLASSES.

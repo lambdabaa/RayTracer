@@ -7,7 +7,6 @@ import java.util.List;
 
 import ray.light.Light;
 import ray.math.Color;
-import ray.math.Vector3;
 
 /**
  * A simple ray tracer.

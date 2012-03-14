@@ -3,7 +3,6 @@ package ray.shader;
 import java.util.ArrayList;
 
 import ray.IntersectionRecord;
-import ray.RayTracer;
 import ray.Scene;
 import ray.light.Light;
 import ray.math.Color;
